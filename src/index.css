@@ -69,13 +69,37 @@
   .clamp-text {
     font-size: clamp(3rem, 1.4348rem + 7.8261vw, 7.5rem);
   }
+  .container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 }
+
+/* @media (min-width: 400px) {
+  .background-gradient::before {
+    background: radial-gradient(
+      20% 50% at 50% 50%,
+      rgba(71, 127, 247, 0.376) 0%,
+      rgba(37, 38, 44, 0) 100%
+    );
+    opacity: 0.5;
+    z-index: -10;
+    content: "";
+    position: absolute;
+    inset: 0px;
+    transform: scale(1);
+    pointer-events: none;
+  }
+} */
 
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased font-sans min-h-screen flex flex-col;
   }
 }
