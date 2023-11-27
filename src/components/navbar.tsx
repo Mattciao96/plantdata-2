@@ -1,5 +1,6 @@
 import * as React from "react";
-import { ModeToggle } from "./mode-toggle";
+import LanguageSwitcher from "@/components/toggle-language";
+import { ModeToggle } from "./toggle-light-dark";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -114,8 +115,10 @@ export default function Navbar() {
           </a>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <div className="px-4 flex justify-center">
+          <div className="px-4 flex gap-6 justify-center">
             <ModeToggle />
+
+            <LanguageSwitcher />
           </div>
         </NavigationMenuItem>
       </NavigationMenuList>

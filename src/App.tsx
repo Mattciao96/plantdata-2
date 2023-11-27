@@ -2,41 +2,29 @@ import { motion } from "framer-motion";
 import { useTranslation, Trans } from "react-i18next";
 import { Suspense } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/toggle-light-dark";
 import { Button } from "@/components/ui/button";
 import Navbar from "./components/navbar";
 import HeroSection from "./components/hero";
-
-const lngs: Record<string, { nativeName: string }> = {
-  en: { nativeName: "English" },
-  it: { nativeName: "Italiano" },
-};
+import LanguageSwitcher from "@/components/toggle-language";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <main>
       <Navbar />
-      <HeroSection />
+      <HeroSection>
+        <h1 className="text-[#3ecf8e] text-6xl font-medium">
+          {t("home-title")}
+        </h1>
+        <h2 className="text-5xl font-medium">{t("home-subtitle")}</h2>
+      </HeroSection>
       <Button>Hello</Button>
       <div className="p-4 flex justify-center">
         <ModeToggle />
       </div>
-      <div>
-        {Object.keys(lngs).map((lng) => (
-          <button
-            key={lng}
-            style={{
-              fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
-            }}
-            type="submit"
-            onClick={() => i18n.changeLanguage(lng)}
-          >
-            {lngs[lng].nativeName}
-          </button>
-        ))}
-      </div>
+      <LanguageSwitcher />
       <p>
         <Trans i18nKey="description.part1">
           Edit <code>src/App.js</code> and save to reload.
@@ -51,43 +39,7 @@ function App() {
         necessitatibus esse odit magni earum quod repellendus sunt, cum animi
         doloribus amet molestiae minima. Architecto nulla quae neque quia porro?
       </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil totam
-        necessitatibus esse odit magni earum quod repellendus sunt, cum animi
-        doloribus amet molestiae minima. Architecto nulla quae neque quia porro?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil totam
-        necessitatibus esse odit magni earum quod repellendus sunt, cum animi
-        doloribus amet molestiae minima. Architecto nulla quae neque quia porro?
-      </p>
-      v v
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil totam
-        necessitatibus esse odit magni earum quod repellendus sunt, cum animi
-        doloribus amet molestiae minima. Architecto nulla quae neque quia porro?
-      </p>
-      v
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil totam
-        necessitatibus esse odit magni earum quod repellendus sunt, cum animi
-        doloribus amet molestiae minima. Architecto nulla quae neque quia porro?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil totam
-        necessitatibus esse odit magni earum quod repellendus sunt, cum animi
-        doloribus amet molestiae minima. Architecto nulla quae neque quia porro?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil totam
-        necessitatibus esse odit magni earum quod repellendus sunt, cum animi
-        doloribus amet molestiae minima. Architecto nulla quae neque quia porro?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil totam
-        necessitatibus esse odit magni earum quod repellendus sunt, cum animi
-        doloribus amet molestiae minima. Architecto nulla quae neque quia porro?
-      </p>
+
       <h1 className="text-9xl">hello worldy</h1>
       <div className="overflow-hidden">
         <motion.div
