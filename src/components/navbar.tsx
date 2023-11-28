@@ -2,6 +2,7 @@ import * as React from "react";
 import { Leaf } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/toggle-language";
+import { Fade as Hamburger } from 'hamburger-react'
 import { MobileNav } from "./navbar-mobile";
 import { ModeToggle } from "./toggle-light-dark";
 import { cn } from "@/lib/utils";
@@ -64,12 +65,15 @@ export default function Navbar() {
         </NavigationMenuItem>
       </NavigationMenuList>
       {/* this is for mobile */}
-      <button
+      {/* <button
         className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
         {showMobileMenu ? "X" : "="}
-      </button>
+      </button> */}
+      <div className="md:hidden">
+        <Hamburger size={ 30} toggled={showMobileMenu} toggle={setShowMobileMenu} />
+        </div>
       {showMobileMenu && components && (
         <MobileNav items={components}>
           <NavOptionButtons />

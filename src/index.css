@@ -4,7 +4,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* --background: 0 0% 100%; */
+    --background: 190, 43%, 97%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -79,7 +80,7 @@
   }
 }
 .ta {
-color: hsl(195, 84%, 10%)
+color: hsl(190, 43%, 97%)
 }
 
 

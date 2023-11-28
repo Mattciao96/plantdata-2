@@ -17,7 +17,7 @@ function App() {
       <header className="sticky top-0 z-20 border-b border-input shadow-sm">
         <Navbar />
       </header>
-      <main className="container max-w-7xl">
+      <main className="container">
         <HeroSection>
           <h1 className="text-[#3ecf8e] text-6xl font-medium">
             {t("home-title")}
