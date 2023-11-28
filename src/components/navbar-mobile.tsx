@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { useLockBody } from "@/hooks/use-lock-body.ts";
 
 interface MobileNavProps {
-  items: MainNavItem[];
+  items: { text: string; href: string }[];
   children?: React.ReactNode;
 }
 
