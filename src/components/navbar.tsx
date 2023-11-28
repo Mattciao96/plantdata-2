@@ -5,14 +5,21 @@ import LanguageSwitcher from "@/components/toggle-language";
 import { Fade as Hamburger } from 'hamburger-react'
 import { MobileNav } from "./navbar-mobile";
 import { ModeToggle } from "./toggle-light-dark";
-import { cn } from "@/lib/utils";
-import {
+/* import { cn } from "@/lib/utils"; */
+/* import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"; */
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 

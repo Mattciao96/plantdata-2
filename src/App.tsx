@@ -61,7 +61,7 @@ function App() {
         </div>
         <div className="mr-auto ml-auto">
         <div className="flex flex-col">
-          {Array.from({ length: 200 }, (_, i) => (
+          {Array.from({ length: 200 }, () => (
             <Rat className="h-[2.2rem] w-[2.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           ))}
           </div>
