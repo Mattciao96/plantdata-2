@@ -1,5 +1,7 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/toggle-language";
+import { MobileNav } from "./navbar-mobile";
 import { ModeToggle } from "./toggle-light-dark";
 import { cn } from "@/lib/utils";
 import {
@@ -14,7 +16,7 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
+    title: "",
     href: "/docs/primitives/alert-dialog",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
@@ -51,66 +53,34 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export default function Navbar() {
+  const { t } = useTranslation();
+  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   return (
-    /*   // add to NavigationMenu a border botton with aslight shade with tailwind */
-
-    <NavigationMenu className="container bg-background max-w-none flex justify-evenly border-b border-input shadow-sm">
-      <div className="fixed p-[4px] left-0 top-0 w-20">
+    <NavigationMenu className="container bg-background flex justify-between max-w-7xl relative z-50
+    ">
+      <div className="p-[4px] w-20 bg-background ">
         <img src="plantdata.png" alt="PlantData logo" />
       </div>
-      <NavigationMenuList className="p-3">
+      {/* this is for desktop */}
+      <NavigationMenuList className="p-3 hidden md:flex">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <a href="/docs">
+          <a href="/who-are-we">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
+              {t("nav-links.who-are-we")}
+            </NavigationMenuLink>
+          </a>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <a href="/resources">
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              {t("nav-links.resources")}
+            </NavigationMenuLink>
+          </a>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <a href="/contacts">
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              {t("nav-links.contacts")}
             </NavigationMenuLink>
           </a>
         </NavigationMenuItem>
@@ -122,7 +92,28 @@ export default function Navbar() {
           </div>
         </NavigationMenuItem>
       </NavigationMenuList>
+      {/* this is for mobile */}
+      <button
+        className="flex items-center space-x-2 md:hidden"
+        onClick={() => setShowMobileMenu(!showMobileMenu)}
+      >
+        {showMobileMenu ? "X" : "="}
+        <span className="font-bold">Menu</span>
+      </button>
+      {showMobileMenu && components && (
+        <MobileNav items={components}><NavOptionButtons/></MobileNav>
+      )}
     </NavigationMenu>
+  );
+}
+
+function NavOptionButtons() {
+  return (
+    <div className="px-4 flex gap-6 justify-center">
+      <ModeToggle />
+
+      <LanguageSwitcher />
+    </div>
   );
 }
 

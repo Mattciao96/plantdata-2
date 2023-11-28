@@ -7,16 +7,17 @@ import { Button } from "@/components/ui/button";
 import Navbar from "./components/navbar";
 import HeroSection from "./components/hero";
 import LanguageSwitcher from "@/components/toggle-language";
+import { Rat } from "lucide-react";
 
 function App() {
   const { t } = useTranslation();
 
   return (
     <>
-      <header className="sticky top-0 z-20">
+      <header className="sticky top-0 z-20 border-b border-input shadow-sm">
         <Navbar />
       </header>
-      <main>
+      <main className="container max-w-7xl">
         <HeroSection>
           <h1 className="text-[#3ecf8e] text-6xl font-medium">
             {t("home-title")}
@@ -58,6 +59,14 @@ function App() {
         <div className="p-4 flex justify-center">
           <ModeToggle />
         </div>
+        <div className="mr-auto ml-auto">
+        <div className="flex flex-col">
+          {Array.from({ length: 200 }, (_, i) => (
+            <Rat className="h-[2.2rem] w-[2.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          ))}
+          </div>
+          
+          </div>
       </main>
     </>
   );
