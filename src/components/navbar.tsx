@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Leaf } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/toggle-language";
 import { MobileNav } from "./navbar-mobile";
@@ -14,41 +15,18 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const components: { title: string; href: string; description: string }[] = [
+const components: { text: string; href: string }[] = [
   {
-    title: "",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    text: "nav-links.who-are-we",
+    href: "/who-are-we",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    text: "nav-links.resources",
+    href: "/resources",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    text: "nav-links.contacts",
+    href: "/contacts",
   },
 ];
 
@@ -56,34 +34,27 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   return (
-    <NavigationMenu className="container bg-background flex justify-between max-w-7xl relative z-50
-    ">
-      <div className="p-[4px] w-20 bg-background ">
-        <img src="plantdata.png" alt="PlantData logo" />
+    <NavigationMenu
+      className="min-h-[4rem] container bg-background flex justify-between max-w-7xl relative z-50
+    "
+    >
+      <div className="p-[4px] flex items-center">
+        {/* <img src="plantdata.png" alt="PlantData logo" /> */}
+        <Leaf className="h-9 w-9 text-[#3ecf8e]" />
+        <span className="pl-1 text-[#3ecf8e] text-2xl font-bold">PlantData</span>
       </div>
       {/* this is for desktop */}
       <NavigationMenuList className="p-3 hidden md:flex">
-        <NavigationMenuItem>
-          <a href="/who-are-we">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              {t("nav-links.who-are-we")}
-            </NavigationMenuLink>
-          </a>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <a href="/resources">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              {t("nav-links.resources")}
-            </NavigationMenuLink>
-          </a>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <a href="/contacts">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              {t("nav-links.contacts")}
-            </NavigationMenuLink>
-          </a>
-        </NavigationMenuItem>
+        {components.map((component, index) => (
+          <NavigationMenuItem key={index}>
+            <a href={component.href}>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                {t(component.text)}
+              </NavigationMenuLink>
+            </a>
+          </NavigationMenuItem>
+        ))}
+        {/* options */}
         <NavigationMenuItem>
           <div className="px-4 flex gap-6 justify-center">
             <ModeToggle />
@@ -98,10 +69,11 @@ export default function Navbar() {
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
         {showMobileMenu ? "X" : "="}
-        <span className="font-bold">Menu</span>
       </button>
       {showMobileMenu && components && (
-        <MobileNav items={components}><NavOptionButtons/></MobileNav>
+        <MobileNav items={components}>
+          <NavOptionButtons />
+        </MobileNav>
       )}
     </NavigationMenu>
   );
@@ -109,15 +81,14 @@ export default function Navbar() {
 
 function NavOptionButtons() {
   return (
-    <div className="px-4 flex gap-6 justify-center">
+    <div className="-ml-10 px-4 flex gap-6 justify-center items-end">
       <ModeToggle />
-
       <LanguageSwitcher />
     </div>
   );
 }
 
-const ListItem = React.forwardRef<
+/* const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
 >(({ className, title, children, ...props }, ref) => {
@@ -142,3 +113,4 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
+ */
