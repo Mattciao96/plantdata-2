@@ -20,10 +20,10 @@ export function MobileNav({ items, children }: MobileNavProps) {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
       className={cn(
-        "fixed inset-0 bottom-16 -z-10 grid min-h-screen grid-flow-row overflow-auto shadow-md md:hidden"
+        "fixed inset-0 bottom-16 -z-10 grid min-h-[100dvh] grid-flow-row overflow-auto shadow-md md:hidden"
       )}
     >
-      <div className="relative pt-24 pb-4 pl-10 min-h-screen -z-10 grid gap-6 bg-background  text-popover-foreground shadow-md">
+      <div className="relative pt-24 pb-4 pl-10 min-h-[100dvh] -z-10 grid gap-6 bg-background  text-popover-foreground shadow-md">
         <nav className="grid grid-flow-row auto-rows-max ">
           {items.map((item, index) => (
             <motion.div
