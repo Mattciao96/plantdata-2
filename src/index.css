@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    /* --background: 0 0% 100%; */
-    --background: 190, 43%, 97%;
+    --background: 0 0% 100%;
+    /* --background: 190, 43%, 97%; */
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -71,6 +71,11 @@
   .clamp-text {
     font-size: clamp(3rem, 1.4348rem + 7.8261vw, 7.5rem);
   }
+  .text-title{
+    font-size:max(38px,min(5vw,76px));
+    line-height: 1;
+    letter-spacing: -.02em;
+  }
   .container {
     width: 100%;
     margin-right: auto;
@@ -78,7 +83,17 @@
     padding-right: 2rem;
     padding-left: 2rem;
   }
+  .h-max-content {
+    height: max-content;
+  }
 }
+
+@supports ((-webkit-backdrop-filter: var(--tw )) or (backdrop-filter:var(--tw ))) {
+  .supports-\[backdrop-filter\]\:bg-background\/60 {
+      background-color:hsl(var(--background)/.6);
+  }
+}
+
 .ta {
 color: hsl(190, 43%, 97%)
 }

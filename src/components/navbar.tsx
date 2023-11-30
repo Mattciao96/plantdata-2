@@ -1,11 +1,12 @@
 import * as React from "react";
+import { Button } from "@/components/ui/button";
 import { Leaf } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/toggle-language";
-import { Fade as Hamburger } from 'hamburger-react'
+import { Fade as Hamburger } from "hamburger-react";
 import { MobileNav } from "./navbar-mobile";
 import { ModeToggle } from "./toggle-light-dark";
-/* import { cn } from "@/lib/utils"; */
+import { cn } from "@/lib/utils";
 /* import {
   NavigationMenu,
   NavigationMenuContent,
@@ -43,20 +44,22 @@ export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   return (
     <NavigationMenu
-      className="min-h-[4rem] container bg-background flex justify-between max-w-7xl relative z-50
-    "
+      className="min-h-[4rem] container flex justify-between max-w relative z-50
+      bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
       <div className="p-[4px] flex items-center">
         {/* <img src="plantdata.png" alt="PlantData logo" /> */}
         <Leaf className="h-9 w-9 text-[#3ecf8e]" />
-        <span className="pl-1 text-[#3ecf8e] text-2xl font-bold">PlantData</span>
+        <span className="pl-1 text-2xl font-bold">PlantData</span>
       </div>
       {/* this is for desktop */}
       <NavigationMenuList className="p-3 hidden md:flex">
         {components.map((component, index) => (
           <NavigationMenuItem key={index}>
             <a href={component.href}>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={cn(navigationMenuTriggerStyle(), "bg-transparent")}
+              >
                 {t(component.text)}
               </NavigationMenuLink>
             </a>
@@ -71,16 +74,16 @@ export default function Navbar() {
           </div>
         </NavigationMenuItem>
       </NavigationMenuList>
-      {/* this is for mobile */}
-      {/* <button
-        className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
-      >
-        {showMobileMenu ? "X" : "="}
-      </button> */}
+
       <div className="md:hidden">
-        <Hamburger size={ 30} toggled={showMobileMenu} toggle={setShowMobileMenu} />
-        </div>
+        <Button className="relative w-fit" variant="secondary" size="icon">
+          <Hamburger
+            size={26}
+            toggled={showMobileMenu}
+            toggle={setShowMobileMenu}
+          />
+        </Button>
+      </div>
       {showMobileMenu && components && (
         <MobileNav items={components}>
           <NavOptionButtons />
@@ -92,7 +95,7 @@ export default function Navbar() {
 
 function NavOptionButtons() {
   return (
-    <div className="-ml-10 px-4 flex gap-6 justify-center items-end">
+    <div className="px-4 flex gap-6 justify-center items-end">
       <ModeToggle />
       <LanguageSwitcher />
     </div>

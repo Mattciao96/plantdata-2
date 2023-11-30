@@ -5,7 +5,10 @@
   },
   "floritaly-description": "Floritaly è un'azienda agricola che si occupa di coltivazione e vendita di piante da frutto e da giardino.",
   "home-title": "PlantData",
-  "home-subtitle": "Centro Interuniversitario",
+  "home-subtitle": {
+    "part1": "Centro",
+    "part2": "Interuniversitario"
+  },
   "nav-links": {
     "who-are-we": "Chi siamo",
     "resources": "Risorse",

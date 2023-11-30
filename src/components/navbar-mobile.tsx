@@ -23,7 +23,9 @@ export function MobileNav({ items, children }: MobileNavProps) {
         "fixed inset-0 bottom-16 -z-10 grid min-h-[100dvh] grid-flow-row overflow-auto shadow-md md:hidden"
       )}
     >
-      <div className="relative pt-24 pb-4 pl-10 min-h-[100dvh] -z-10 grid gap-6 bg-background  text-popover-foreground shadow-md">
+      {/* hide overscroll GOLDDDD */}
+      <div className="fixed top-0 h-12 w-full min-w-full bg-background"></div>
+      <div className="relative pt-24 pb-4 px-10 h-max-content min-h-[100dvh] -z-10 grid gap-6 bg-background  text-popover-foreground shadow-md">
         <nav className="grid grid-flow-row auto-rows-max ">
           {items.map((item, index) => (
             <motion.div

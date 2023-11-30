@@ -6,11 +6,12 @@ import { ModeToggle } from "@/components/toggle-light-dark";
 import { Button } from "@/components/ui/button";
 import Navbar from "./components/navbar";
 import HeroSection from "./components/hero";
+import Grid from "./components/discover";
 import LanguageSwitcher from "@/components/toggle-language";
 import { Rat } from "lucide-react";
 
 function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -19,12 +20,20 @@ function App() {
       </header>
       <main className="container">
         <HeroSection>
-          <h1 className="text-[#3ecf8e] text-6xl font-medium">
+          {i18n.resolvedLanguage === 'en' &&
+          <h1 className="text-[#3ecf8e]  text-title font-medium text-center md:text-left">
             {t("home-title")}
-          </h1>
-          <h2 className="text-5xl font-medium">{t("home-subtitle")}</h2>
+          </h1>}
+          <h2 className=" text-title font-medium text-center md:text-left">{t("home-subtitle.part1")}</h2>
+          <h2 className=" text-title font-medium text-center md:text-left">{t("home-subtitle.part2")}</h2>
+          {i18n.resolvedLanguage === 'it' &&
+          <h1 className="text-[#3ecf8e]  text-title font-medium text-center md:text-left">
+            {t("home-title")}
+            </h1>}
+            <Button>Hello</Button>
         </HeroSection>
-        <Button>Hello</Button>
+        <Grid />
+        
         <div className="p-4 flex justify-center">
           <ModeToggle />
         </div>
