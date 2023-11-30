@@ -7,8 +7,10 @@ import { Button } from "@/components/ui/button";
 import Navbar from "./components/navbar";
 import HeroSection from "./components/hero";
 import Grid from "./components/discover";
+import Footer from "./components/footer";
 import LanguageSwitcher from "@/components/toggle-language";
 import { Rat } from "lucide-react";
+
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -30,7 +32,11 @@ function App() {
           <h1 className="text-[#3ecf8e]  text-title font-medium text-center md:text-left">
             {t("home-title")}
             </h1>}
-            <Button>Hello</Button>
+          <p className="text-center max-w-md md:text-justify md:pl-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat repellendus sit quia commodi illum quod voluptatibus? Reprehenderit, odio consequatur. Magnam vero laudantium perferendis provident facilis aperiam omnis quam, fuga corporis!</p>
+          <div className="md:pl-1 py-2">
+            <Button>Risorse </Button>
+            </div>
+          
         </HeroSection>
         <Grid />
         
@@ -70,13 +76,14 @@ function App() {
         </div>
         <div className="mr-auto ml-auto">
         <div className="flex flex-col">
-          {Array.from({ length: 200 }, () => (
+          {Array.from({ length: 2 }, () => (
             <Rat className="h-[2.2rem] w-[2.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           ))}
           </div>
           
           </div>
       </main>
+      <Footer />
     </>
   );
 }

@@ -7,31 +7,18 @@
 
 export default function Grid() {
   return (
-    <div className="grid grid-cols-6 gap-4">
-      <div className="col-span-2 bg-amber-400 rounded-sm"> Ciao</div>
-      <div className="col-span-4"> Ciaoo</div>
-      <div className="col-span-4"> Ciao</div>
-      <div className="col-span-2"> Ciaoo</div>
-      <div className="col-span-2"> Ciao</div>
-      <div className="col-span-4"> Ciaoo</div>
-      {/* <div className="bg-red-500">1</div>
-      <div className="bg-red-500">2</div>
-      <div className="bg-red-500">3</div>
-      <div className="bg-red-500">4</div>
-      <div className="bg-red-500">5</div>
-      <div className="bg-red-500">6</div>
-      <div className="bg-red-500">1</div>
-      <div className="bg-red-500">2</div>
-      <div className="bg-red-500">3</div>
-      <div className="bg-red-500">4</div>
-      <div className="bg-red-500">5</div>
-      <div className="bg-red-500">6</div>
-      <div className="bg-red-500">1</div>
-      <div className="bg-red-500">2</div>
-      <div className="bg-red-500">3</div>
-      <div className="bg-red-500">4</div>
-      <div className="bg-red-500">5</div>
-      <div className="bg-red-500">6</div> */}
-    </div>
+    
+    <div className="grid grid-cols-3 gap-4">
+      <div className="col-span-1 h-[30rem] border border-input rounded-md flex items-center justify-center"> Ciao</div>
+      <div className="col-span-2 h-[30rem] border border-input rounded-md flex items-center justify-center"> Ciao</div>
+      
+      <div className="col-span-2 h-[30rem] border border-input rounded-md flex items-center justify-center"> Ciao</div>
+      <div className="col-span-1 h-[30rem] border border-input rounded-md flex items-center justify-center"> Ciao</div>
+      <div className="col-span-1 h-[30rem] border border-input rounded-md flex items-center justify-center"> Ciao</div>
+      <div className="col-span-2 h-[30rem] border border-input rounded-md flex items-center justify-center"> Ciao</div>
+      </div>
+      
+      
+    
   );
 }

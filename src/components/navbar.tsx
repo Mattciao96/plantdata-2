@@ -58,7 +58,7 @@ export default function Navbar() {
           <NavigationMenuItem key={index}>
             <a href={component.href}>
               <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "bg-transparent")}
+                className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-secondary/90 hover:backdrop-blur hover:supports-[backdrop-filter]:bg-secondary/60")}
               >
                 {t(component.text)}
               </NavigationMenuLink>
