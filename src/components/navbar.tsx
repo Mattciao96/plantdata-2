@@ -44,7 +44,7 @@ export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   return (
     <NavigationMenu
-      className="min-h-[4rem] container flex justify-between max-w relative z-50
+      className="min-h-[3.4rem] container flex justify-between max-w relative z-50
       bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
       <div className="p-[4px] flex items-center">

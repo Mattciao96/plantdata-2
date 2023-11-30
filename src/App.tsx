@@ -37,7 +37,7 @@ function App() {
               {t("home-title")}
             </h1>
           )}
-          <p className="text-center max-w-md md:text-justify md:pl-1">
+          <p className="py-2 text-center max-w-md md:text-justify md:pl-1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
             repellendus sit quia commodi illum quod voluptatibus? Reprehenderit,
             odio consequatur. Magnam vero laudantium perferendis provident

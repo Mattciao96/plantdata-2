@@ -20,12 +20,12 @@ export default function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" className="focus-invisible bg-transparent hover:bg-secondary/90 hover:backdrop-blur hover:supports-[backdrop-filter]:bg-secondary/60">
           <span>{selectedLanguage}</span>
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="min-w-[5rem]" align="end">
+      <DropdownMenuContent className="min-w-[5rem] dark:border dark:border-input" align="end">
         {Object.keys(lngs).map((lng) => (
           <DropdownMenuItem
             key={lng}
