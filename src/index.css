@@ -78,7 +78,7 @@
     font-size: clamp(3rem, 1.4348rem + 7.8261vw, 7.5rem);
   }
   .text-title{
-    font-size:max(38px,min(5vw,76px));
+    font-size:max(38px,min(12vw,76px));
     line-height: 1;
     letter-spacing: -.02em;
   }
@@ -94,6 +94,12 @@
   }
   .focus-invisible {
     --tw-ring-shadow: none !important;
+  }
+  .hamburger-react:focus-visible {
+    outline: 2px solid white !important;
+    border-radius: 0.5rem;
+    color: hsl(var(--accent-foreground));
+    background-color: hsl(var(--accent));
   }
 }
 

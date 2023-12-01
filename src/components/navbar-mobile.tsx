@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
 import { useLockBody } from "@/hooks/use-lock-body.ts";
@@ -10,7 +11,7 @@ interface MobileNavProps {
   children?: React.ReactNode;
 }
 
-export function MobileNav({ items, children }: MobileNavProps) {
+export function MobileNav({ items, onClick, children }: MobileNavProps) {
   useLockBody();
   const { t } = useTranslation();
 
@@ -34,15 +35,16 @@ export function MobileNav({ items, children }: MobileNavProps) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              <a
+              <Link
                 key={index}
-                href={item.href}
+                to={item.href}
                 className={cn(
                   "flex items-center rounded-md py-3 pl-9 pr-2 text-2xl font-medium hover:underline"
                 )}
+                onClick={() => onClick(false)}
               >
                 {t(item.text)}
-              </a>
+              </Link>
             </motion.div>
           ))}
         </nav>

@@ -9,9 +9,8 @@ import Footer from "./components/footer";
 function App() {
   return (
     <>
-      <header className="sticky top-0 z-20 border-b border-input shadow-sm">
-        <Navbar />
-      </header>
+      <Navbar />
+
       <main className="container">
         <HeroSection></HeroSection>
         <Grid />

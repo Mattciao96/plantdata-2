@@ -7,6 +7,7 @@ import { Fade as Hamburger } from "hamburger-react";
 import { MobileNav } from "./navbar-mobile";
 import { ModeToggle } from "./toggle-light-dark";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 /* import {
   NavigationMenu,
   NavigationMenuContent,
@@ -27,15 +28,15 @@ import {
 const components: { text: string; href: string }[] = [
   {
     text: "nav-links.who-are-we",
-    href: "/who-are-we",
+    href: "who-are-we",
   },
   {
     text: "nav-links.resources",
-    href: "/resources",
+    href: "resources",
   },
   {
     text: "nav-links.contacts",
-    href: "/contacts",
+    href: "contacts",
   },
 ];
 
@@ -43,53 +44,63 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   return (
-    <NavigationMenu
-      className="min-h-[3.4rem] container flex justify-between max-w relative z-50
+    <header className="sticky top-0 z-20 border-b border-input shadow-sm">
+      <NavigationMenu
+        className="min-h-[3.4rem] container flex justify-between max-w relative z-50
       bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-    >
-      <div className="p-[4px] flex items-center">
-        {/* <img src="plantdata.png" alt="PlantData logo" /> */}
-        <Leaf className="h-9 w-9 text-[#3ecf8e]" />
-        <span className="pl-1 text-2xl font-bold">PlantData</span>
-      </div>
-      {/* this is for desktop */}
-      <NavigationMenuList className="p-3 hidden md:flex">
-        {components.map((component, index) => (
-          <NavigationMenuItem key={index}>
-            <a href={component.href}>
-              <NavigationMenuLink
-                className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-secondary/90 hover:backdrop-blur hover:supports-[backdrop-filter]:bg-secondary/60")}
-              >
-                {t(component.text)}
-              </NavigationMenuLink>
-            </a>
+      >
+        <div className="p-[4px] flex items-center">
+          {/* <img src="plantdata.png" alt="PlantData logo" /> */}
+          <Leaf className="h-9 w-9 text-[#3ecf8e]" />
+          <Link
+            to={"/"}
+            className="pl-1 text-2xl font-bold"
+            onClick={() => {
+              showMobileMenu && setShowMobileMenu(false);
+            }}
+          >
+            PlantData
+          </Link>
+        </div>
+        {/* this is for desktop */}
+        <NavigationMenuList className="p-3 hidden md:flex">
+          {components.map((component, index) => (
+            <NavigationMenuItem key={index}>
+              <Link to={component.href}>
+                <NavigationMenuLink
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "bg-transparent hover:bg-secondary/90 hover:backdrop-blur hover:supports-[backdrop-filter]:bg-secondary/60"
+                  )}
+                >
+                  {t(component.text)}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          ))}
+          {/* options */}
+          <NavigationMenuItem>
+            <div className="px-4 flex gap-6 justify-center">
+              <ModeToggle />
+
+              <LanguageSwitcher />
+            </div>
           </NavigationMenuItem>
-        ))}
-        {/* options */}
-        <NavigationMenuItem>
-          <div className="px-4 flex gap-6 justify-center">
-            <ModeToggle />
-
-            <LanguageSwitcher />
-          </div>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-
-      <div className="md:hidden">
-        <Button className="relative w-fit" variant="secondary" size="icon">
+        </NavigationMenuList>
+        <div className="md:hidden">
           <Hamburger
             size={26}
             toggled={showMobileMenu}
             toggle={setShowMobileMenu}
           />
-        </Button>
-      </div>
-      {showMobileMenu && components && (
-        <MobileNav items={components}>
-          <NavOptionButtons />
-        </MobileNav>
-      )}
-    </NavigationMenu>
+        </div>
+        {showMobileMenu && components && (
+          <MobileNav items={components} onClick={setShowMobileMenu}>
+            <NavOptionButtons />
+          </MobileNav>
+        )}
+      </NavigationMenu>
+    </header>
   );
 }
 
