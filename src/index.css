@@ -73,6 +73,29 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
+
+@supports ((-webkit-backdrop-filter: var(--tw )) or (backdrop-filter:var(--tw ))) {
+  .supports-\[backdrop-filter\]\:bg-background\/60 {
+      background-color:hsl(var(--background)/.6);
+  }
+}
+
+.ta {
+color: hsl(217, 34%, 37%)
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-sans min-h-screen flex flex-col;
+  }
+}
+
 @layer utilities {
   .clamp-text {
     font-size: clamp(3rem, 1.4348rem + 7.8261vw, 7.5rem);
@@ -100,26 +123,5 @@
     border-radius: 0.5rem;
     color: hsl(var(--accent-foreground));
     background-color: hsl(var(--accent));
-  }
-}
-
-@supports ((-webkit-backdrop-filter: var(--tw )) or (backdrop-filter:var(--tw ))) {
-  .supports-\[backdrop-filter\]\:bg-background\/60 {
-      background-color:hsl(var(--background)/.6);
-  }
-}
-
-.ta {
-color: hsl(217, 34%, 37%)
-}
-
-
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground antialiased font-sans min-h-screen flex flex-col;
   }
 }
