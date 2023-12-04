@@ -21,6 +21,7 @@ module.exports = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        pure: "hsl(var(--background-pure))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -65,6 +66,9 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+      },
+      boxShadow: {
+        neon: '0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0, 0 0 50px #0f0',
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

@@ -1,6 +1,16 @@
+import WordAnimation from "@/components/ui/green points";
+
 export default function WhoAreWe() {
   return (
     <>
+      <div className="el relative">
+        <img src="./images/Frame.svg" className="w-[100%] absolute t-0 -z-10 overflow-hidden" alt="" />
+       
+      </div>
+      <WordAnimation />
+
+
+
       <div className="w-[300px] h-[300px] border-2 border-input rounded-[100%]">a</div>
       <div className="scene">
         <button>
