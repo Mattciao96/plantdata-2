@@ -32,8 +32,11 @@ export default function HeroSection() {
           <Button>Risorse</Button>
         </div>
       </div>
-      <div className="relative py-32 md:min-w-[600px] md:h-[40rem] object-contain overflow-hidden flex justify-center">
-        <img className="absolute -mt-40 -ml-60" src="./plantrm.png" alt="" />
+      <div className="w-full h-full max-h-[500px] max-w-[500px]">
+        <img className="m-h-[inherit]" src="./images/planthero.png" alt="" />
+      </div>
+      {/* <div className="relative py-32 md:min-w-[600px] md:h-[40rem] object-contain overflow-hidden flex justify-center">
+        <img className="absolute -mt-[120px] w-[400px] h-auto -ml-[250px]" src="./images/planthero.png" alt="" />
         <div className="absolute mt-40 w-full pl-52">
           <div className="rounded-full">
             <div className="shadow-md flex px-4 gap-2 justify-start border-t border-l border-r border-input bg-muted rounded-t-[10px] min-h-[30px]">
@@ -58,10 +61,10 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        {/* <img src="./images/italia2.svg" alt="Phone illustration" className="md:mt-40"/> */}
-        {/* <img src="https://assets.codepen.io/2621168/svgtest.svg" alt="Phone illustration" className="md:mt-40"/> */}
-        {/* <img className="max-w-[200px] max-h-[300px]" src="plantrm.png" alt="hero"></img> */}
-      </div>
+        {/*rem <img src="./images/italia2.svg" alt="Phone illustration" className="md:mt-40"/> 
+        {/*rem <img src="https://assets.codepen.io/2621168/svgtest.svg" alt="Phone illustration" className="md:mt-40"/> 
+        {/rem <img className="max-w-[200px] max-h-[300px]" src="plantrm.png" alt="hero"></img> 
+      </div> */}
     </div>
   );
 }

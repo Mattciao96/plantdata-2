@@ -5,7 +5,7 @@
 @layer base {
   :root {
     /* --background: 0 0% 100%; */
-    --background: 0 0% 98%; 
+    --background: 0 0% 98%;
     /* --background: 214 100% 98%; */
     --background-pure: 0 0% 100%;
 
@@ -93,7 +93,7 @@
 }
 
 .ta {
-  color: hsl(214, 100%, 95%)
+  color: hsl(214, 100%, 95%);
 }
 
 @layer base {
@@ -138,31 +138,26 @@
       brightness(100%) contrast(95%);
   }
 
-  .logo-circle {
-    --circle-size: min(400px);
-    --offset-path: path("M128,0 A128,128 0 1,1 128,256 A128,128 0 1,1 128,0");
-    --stroke-color: #00dc82;
-    --stroke-fade: 80%;
-    --stroke-angle: 180deg;
-    --stroke-size: 2px;
-    width: var(--circle-size);
-    height: var(--circle-size);
-    position: absolute;
+  /* CIRCLE WITH LOGOS AROUND SECTION*/
+
+  .circle-perimeter {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
     background: none;
-    border-radius: 9999px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .logo-circle::before {
+
+  .circle-perimeter::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    padding: var(--stroke-size);
-    background: linear-gradient(
-      var(--stroke-angle),
-      var(--stroke-color),
-      var(--stroke-color),
-      transparent var(--stroke-fade)
-    );
+    padding: 2px;
+    background: linear-gradient(180deg, #00dc82, #00dc82, transparent 90%);
     -webkit-mask:
       linear-gradient(#000, #000) content-box,
       linear-gradient(#000, #000);
@@ -170,17 +165,25 @@
     mask-composite: exclude;
     z-index: -1;
   }
+
   .logo-center {
-    top: 50%;
-    left: 50%;
-    --transform: translate(-50%, -50%);
-    --rotate: 0deg;
-    transform: var(--transform) rotate(var(--rotate));
+    
+  }
+  .pulse {
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    background-color: #00dc82;
     position: absolute;
     background-clip: padding-box;
+    z-index: -1;
+    
   }
+  
+
   .logo1 {
- 
     offset-distance: 80%;
     offset-path: var(--offset-path);
     offset-rotate: 0deg;
@@ -189,46 +192,32 @@
     position: absolute;
     background-clip: padding-box;
   }
-  .logo2 {
-   
-    offset-distance: 0%;
-    offset-path: var(--offset-path);
-    offset-rotate: 0deg;
-    transform: rotate(0deg);
-    border-radius: 100%;
+  .perimeter-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 4px;
+    offset-path: circle(20vw at center);
     position: absolute;
-    background-clip: padding-box;
+
+    offset-rotate: 0deg;
   }
-  .logo3 {
-   
-    offset-distance: 40%;
-    offset-path: var(--offset-path);
-    offset-rotate: 0deg;
-    transform: rotate(0deg);
-    border-radius: 100%;
-    position: absolute;
-    background-clip: padding-box;
+  .logo-pos-1 {
+    offset-distance: 45%;
+  }
+  .logo-pos-2 {
+    offset-distance: 65%;
+  }
+  .logo-pos-3 {
+    offset-distance: 85%;
+  }
+  .logo-pos-4 {
+    offset-distance: 105%;
   }
 
   .el {
-    /* background: conic-gradient(from 180deg at 50% 70%,hsla(0,0%,98%,1) 0deg,#eec32d 72.0000010728836deg,#ec4b4b 144.0000021457672deg,#709ab9 216.00000858306885deg,#4dffbf 288.0000042915344deg,hsla(0,0%,98%,1) 1turn);
-     */
     background: transparent;
     width: 150px;
     height: 200px;
-
-    /* mask: url("./images/noise2.png") center / contain no-repeat; */
-    /* radial-gradient(circle at 50% 50%, #2e405c 1px, transparent 1px) 100% 100% /
-        6px 6px; */
-    /* mask-composite: intersect; */
-    /* animation: flicker 20s infinite linear; */
-  }
-
-  @keyframes flicker {
-    to {
-      mask-position:
-        50% 50%,
-        0 50%;
-    }
   }
 }
