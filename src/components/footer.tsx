@@ -33,6 +33,12 @@ const universityLoghi: UniversityLogoProps[] = [
     className: "dark:filter dark:brightness-0 dark:invert",
   },
   {
+    title: "University of Bologna",
+    image: "./loghi/unibo.png",
+    url: "https://www.unibo.it",
+    className: "max-h-[90px] md:max-h-[100px] dark:filter dark:brightness-0 dark:invert",
+  },
+  {
     title: "University of Trieste",
     image: "./loghi/units.png",
     url: "https://www.units.it",
@@ -124,7 +130,7 @@ export default function Footer() {
 function UniversityLogo({ data }: { data: UniversityLogoProps }) {
   const { title, image, url, className } = data;
   return (
-    <div className="md:w-52 md:h-30 w-[48%] max-w-[220px] h-auto p-2 relative border border-muted rounded-md flex items-center justify-center">
+    <div className="md:w-52 md:max-h-24 w-[48%] max-w-[220px] h-auto p-2 relative border border-muted rounded-md flex items-center justify-center">
       <a href={url} className="absolute inset-0 z-10" aria-label={title} />
       <img src={image} className={cn("", className)} alt={title} />
     </div>

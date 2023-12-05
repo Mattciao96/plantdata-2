@@ -7,7 +7,7 @@ export default function Root() {
   return (
     <>
       <Navbar />
-      <main className="container">
+      <main className="container min-h-[calc(100vh-3.4rem)]">
         <Outlet/>
       </main>
       <Footer />

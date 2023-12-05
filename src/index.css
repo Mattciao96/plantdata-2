@@ -141,8 +141,8 @@
   /* CIRCLE WITH LOGOS AROUND SECTION*/
 
   .circle-perimeter {
-    width: 40vw;
-    height: 40vw;
+    width: 60vw;
+    height: 60vw;
     border-radius: 50%;
     background: none;
     position: relative;
@@ -150,6 +150,7 @@
     align-items: center;
     justify-content: center;
   }
+  
 
   .circle-perimeter::before {
     content: "";
@@ -166,9 +167,7 @@
     z-index: -1;
   }
 
-  .logo-center {
-    
-  }
+  
   .pulse {
     
     width: 50px;
@@ -183,41 +182,89 @@
   }
   
 
-  .logo1 {
-    offset-distance: 80%;
-    offset-path: var(--offset-path);
-    offset-rotate: 0deg;
-    transform: rotate(0deg);
-    border-radius: 100%;
-    position: absolute;
-    background-clip: padding-box;
-  }
+  
   .perimeter-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-block: 4px;
-    offset-path: circle(20vw at center);
+    offset-path: circle(30vw at center);
     position: absolute;
 
     offset-rotate: 0deg;
   }
+
   .logo-pos-1 {
     offset-distance: 45%;
   }
   .logo-pos-2 {
-    offset-distance: 65%;
+    offset-distance: 60%;
   }
   .logo-pos-3 {
-    offset-distance: 85%;
+    offset-distance: 75%;
   }
   .logo-pos-4 {
+    offset-distance: 90%;
+  }
+  .logo-pos-5 {
     offset-distance: 105%;
   }
+
+  @media (min-width: 768px) {
+    .circle-perimeter {
+      width: 340px;
+      height: 340px;
+    }
+    .perimeter-logo {
+      offset-path: circle(170px at center);
+    }
+   }
+   @media (min-width: 1024px) {
+    .circle-perimeter {
+      width: 500px;
+      height: 500px;
+    }
+    .perimeter-logo {
+      offset-path: circle(250px at center);
+    }
+   }
 
   .el {
     background: transparent;
     width: 150px;
     height: 200px;
+  }
+
+  @media (min-width: 768px) {
+  .fading {
+    -webkit-mask-image:linear-gradient(90deg, transparent, #fff 2%, #fff 98%, transparent);
+    mask-image:linear-gradient(90deg, transparent, #fff 2%, #fff 98%, transparent);   
+  }
+}
+
+  .infinite {
+    white-space: nowrap;
+    animation: animate var(--t) linear infinite;
+    animation-delay: calc(var(--t) * -1);
+  }
+  .infinite:nth-child(2) {
+    animation: animate2 var(--t) linear infinite;
+    animation-delay: calc(var(--t) / -2);
+  }
+  @keyframes animate {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes animate2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
   }
 }

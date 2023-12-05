@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "@/routes/root";
 import Home from "@/routes/home";
 import WhoAreWe from "@/routes/who-are-we";
+import Resources from "@/routes/resources";
 import ErrorPage from "@/error-page";
 
 const router = createBrowserRouter([
@@ -17,16 +18,21 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "who-are-we",
-        element: <WhoAreWe />,
-      },
-      {
         path: "/",
         element: <Home />,
       },
+      {
+        path: "who-are-we",
+        element: <WhoAreWe />,
+      },
+
+      {
+        path: "resources",
+        element: <Resources />,
+      },
     ],
-  }
-  
+  },
+
   /* {
     path: "resources",
     element: <Resources />,

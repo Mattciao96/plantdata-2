@@ -22,7 +22,7 @@ export default function HeroSection() {
             {t("home-title")}
           </h1>
         )}
-        <p className="pt-8 md:py-4 m-auto md:m-0 max-w-md text-justify md:pl-1">
+        <p className="pt-8 md:py-4 m-auto md:m-0 max-w-md text-justify md:text-left md:pl-1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
           repellendus sit quia commodi illum quod voluptatibus? Reprehenderit,
           odio consequatur. Magnam vero laudantium perferendis provident facilis
@@ -32,7 +32,7 @@ export default function HeroSection() {
           <Button>Risorse</Button>
         </div>
       </div>
-      <div className="w-full h-full max-h-[500px] max-w-[500px]">
+      <div className="hidden md:block w-full h-full max-h-[500px] max-w-[500px]">
         <img className="m-h-[inherit]" src="./images/planthero.png" alt="" />
       </div>
       {/* <div className="relative py-32 md:min-w-[600px] md:h-[40rem] object-contain overflow-hidden flex justify-center">
