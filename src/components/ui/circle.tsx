@@ -10,6 +10,13 @@ export default function CircleLogo() {
       {/* <div className="logo-center flex items-center bg-pure rounded-full w-[70px] h-[70px] shadow-lg p-1 ">
         <img className="dark:filter dark:brightness-0 dark:invert" src="./loghi/lw-ita.png" alt="" />
       </div> */}
+      <div className="perimeter-logo logo-pos-0 bg-pure rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg p-1">
+        <img
+          className="dark:filter dark:brightness-0 dark:invert"
+          src="./loghi/sapienza.png"
+          alt=""
+        />
+      </div>
       <div className="perimeter-logo logo-pos-1 bg-pure rounded-full  w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg p-1">
         <img
           className="filter brightness-0 dark:invert"
@@ -33,15 +40,22 @@ export default function CircleLogo() {
       </div>
       <div className="perimeter-logo logo-pos-4 bg-pure rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg p-1">
         <img
-          className="filter brightness-0 dark:invert"
-          src="./loghi/units-small.png"
+          className="dark:filter dark:brightness-0 dark:invert"
+          src="./loghi/pisa.png"
           alt=""
         />
       </div>
       <div className="perimeter-logo logo-pos-5 bg-pure rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg p-1">
         <img
-          className="filter brightness-0 dark:invert"
-          src="./loghi/units-small.png"
+          className="dark:filter dark:brightness-0 dark:invert"
+          src="./loghi/perugia.png"
+          alt=""
+        />
+      </div>
+      <div className="perimeter-logo logo-pos-6 bg-pure rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg p-1">
+        <img
+          className="dark:filter dark:brightness-0 dark:invert max-w-[90%] mt-2"
+          src="./loghi/camerino2.png"
           alt=""
         />
       </div>
