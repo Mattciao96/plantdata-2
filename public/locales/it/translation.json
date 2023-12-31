@@ -1,10 +1,5 @@
 {
-  "description": {
-    "part1": "Buongiorno <1>src/App.js</1> und speichere um neu zu laden.",
-    "part2": "Impara React"
-  },
-  "floritaly-description": "Floritaly è un'azienda agricola che si occupa di coltivazione e vendita di piante da frutto e da giardino.",
-  "home-title": "PlantData",
+ "home-title": "PlantData",
   "home-subtitle": {
     "part1": "Centro",
     "part2": "Interuniversitario"
@@ -22,5 +17,20 @@
   "language": {
     "en": "Inglese",
     "it": "Italiano"
+  },
+  "resources-title": "Risorse",
+  "resources-button": "Visita il sito",
+  "floritaly": {
+    "title": "Floritaly",
+    "description": "Floritaly è un'azienda agricola che si occupa di coltivazione e vendita di piante da frutto e da giardino."
+  },
+  "wikiplantbase": {
+    "title": "WikiPlantBase",
+    "description": "WikiPlantBase è un database di piante che raccoglie informazioni su oltre 1000 specie diverse."
+  },
+  "italic" : {
+    "title": "Italic",
+    "description": "Italic è un sito che raccoglie informazioni su licheni."
   }
+  
 }

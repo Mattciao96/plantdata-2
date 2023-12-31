@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { Globe } from "lucide-react";
 import CircleLogo from "./ui/circle";
 
-import ImageScroll from "./ui/image-slide";
+import ImageScrollFixed from "./ui/image-slide-fixed";
 
 // import * as React from "react";
 
@@ -55,7 +55,7 @@ export default function DiscoverSection() {
           </div>
         </div>
         <div className=" gap-8 relative flex justify-center items-center ">
-          <ImageScroll />
+          <ImageScrollFixed />
         </div>
       </div>
       {/* SECTION 3 */}

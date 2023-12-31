@@ -1,9 +1,4 @@
 {
-  "description": {
-    "part1": "Edit <1>src/App.js</1> and save to reload.",
-    "part2": "Learn React"
-  },
-  "floritaly-description": "Floritaly is a company that produces and sells flowers and plants.",
   "home-title": "PlantData",
   "home-subtitle": {
     "part1": "Interuniversity",
@@ -23,5 +18,19 @@
   "language": {
     "en": "English",
     "it": "Italian"
+  },
+  "resources-title": "Resources",
+  "resources-button": "Visit the site",
+  "floritaly": {
+    "title": "Floritaly",
+    "description": "Floritaly is a farm that deals with the cultivation and sale of fruit and garden plants."
+  },
+  "wikiplantbase": {
+    "title": "WikiPlantBase",
+    "description": "WikiPlantBase is a plant database that collects information on over 1000 different species."
+  },
+  "italic" : {
+    "title": "Italic",
+    "description": "Italic is a site that collects information on lichens."
   }
 }
