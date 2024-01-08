@@ -9,13 +9,16 @@ import Footer from "./components/footer";
 function App() {
   return (
     <>
+      
       <Navbar />
 
       <main className="container">
         <HeroSection></HeroSection>
         <Grid />
       </main>
+      
       <Footer />
+      
     </>
   );
 }
