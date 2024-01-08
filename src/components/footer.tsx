@@ -22,52 +22,67 @@ type ContactProps = {
 const universityLoghi: UniversityLogoProps[] = [
   {
     title: "University of Trieste",
-    image: "./loghi/units.png",
+    image: "./images/loghi/units.png",
     url: "https://www.units.it",
     className: "filter brightness-0 dark:invert",
   },
   {
     title: "Lifewatch Italia",
-    image: "./loghi/lw-ita.png",
+    image: "./images/loghi/lw-ita.png",
     url: "https://www.lifewatchitaly.eu",
     className: "dark:filter dark:brightness-0 dark:invert",
   },
+  
+  {
+    title: "University of Roma",
+    image: "./images/loghi/sap-full.png",
+    url: "https://www.uniroma1.it/it/pagina-strutturale/home",
+    className: "",
+  },
+
+  {
+    title: "University of Camerino",
+    image: "./images/loghi/cam-full-2.png",
+    url: "https://www.unicam.it/",
+    className: "",
+  },
+  {
+    title: "University of Perugia",
+    image: "./images/loghi/perugia-full.svg",
+    url: "https://www.unipg.it/",
+    className: "",
+  },
   {
     title: "University of Bologna",
-    image: "./loghi/unibo.png",
+    image: "./images/loghi/unibo.png",
     url: "https://www.unibo.it",
-    className: "max-h-[90px] md:max-h-[100px] dark:filter dark:brightness-0 dark:invert",
+    className:
+      "max-h-[90px] md:max-h-[90px] dark:filter dark:brightness-0 dark:invert",
   },
   {
-    title: "University of Trieste",
-    image: "./loghi/units.png",
-    url: "https://www.units.it",
-    className: "filter brightness-0 dark:invert",
-  },
-  {
-    title: "University of Trieste",
-    image: "./loghi/units.png",
-    url: "https://www.units.it",
-    className: "filter brightness-0 dark:invert",
+    title: "University of Pisa",
+    image: "./images/loghi/pisa-full.png",
+    url: "https://www.unipi.it/",
+    className: "max-h-[90px] md:max-h-[90px]",
   },
 ];
 
 const socialLoghi: SocialLogoProps[] = [
   {
     title: "Plantdata Github",
-    image: "./loghi/github-mark.svg",
+    image: "./images/loghi/github-mark.svg",
     url: "https://www.units.it",
     className: "filter brightness-0 dark:invert",
   },
   {
     title: "Plantdata Github",
-    image: "./loghi/github-mark.svg",
+    image: "./images/loghi/github-mark.svg",
     url: "https://www.units.it",
     className: "filter brightness-0 dark:invert",
   },
   {
     title: "Plantdata Github",
-    image: "./loghi/github-mark.svg",
+    image: "./images/loghi/github-mark.svg",
     url: "https://www.units.it",
     className: "filter brightness-0 dark:invert",
   },
@@ -116,13 +131,13 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      
-      <div className="pt-6 border-t border-input flex justify-center gap-8">
-        {socialLoghi.map((data, index) => (
-          <SocialLogo key={index} data={data} />
-        ))}
+
+        <div className="pt-6 border-t border-input flex justify-center gap-8">
+          {socialLoghi.map((data, index) => (
+            <SocialLogo key={index} data={data} />
+          ))}
         </div>
-        </div>
+      </div>
     </footer>
   );
 }
