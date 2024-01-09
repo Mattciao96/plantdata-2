@@ -33,13 +33,17 @@ export default function HeroSection() {
         </div>
       </div>
       {/* <div className="hidden md:mt-28 md:block w-full h-full max-h-[500px] max-w-[500px]">
-        <img className="m-h-[inherit]" src="./images/leaves3.png" alt="" />
+        <img className="m-h-[inherit]" src="./images/other/leaves3.png" alt="" />
       </div> */}
       <div className="hidden md:mt-2 md:block w-full h-full max-h-[500px] max-w-[500px]">
-        <img className="m-h-[inherit]" src="./images/planthero.png" alt="" />
+        <img
+          className="m-h-[inherit]"
+          src="./images/other/planthero.png"
+          alt=""
+        />
       </div>
       {/* <div className="relative py-32 md:min-w-[600px] md:h-[40rem] object-contain overflow-hidden flex justify-center">
-        <img className="absolute -mt-[120px] w-[400px] h-auto -ml-[250px]" src="./images/planthero.png" alt="" />
+        <img className="absolute -mt-[120px] w-[400px] h-auto -ml-[250px]" src="./images/other/planthero.png" alt="" />
         <div className="absolute mt-40 w-full pl-52">
           <div className="rounded-full">
             <div className="shadow-md flex px-4 gap-2 justify-start border-t border-l border-r border-input bg-muted rounded-t-[10px] min-h-[30px]">
@@ -51,7 +55,7 @@ export default function HeroSection() {
             <div className="relative min-h-[300px] w-full bg-muted border-input z-10 border rounded-b-[10px] flex items-center">
               <div className="el relative w-[150px] h-[200px]">
                 <img
-                  src="./images/Frame.svg"
+                  src="./images/other/Frame.svg"
                   className="w-full absolute t-0 -z-10 overflow-hidden"
                   alt=""
                 />
@@ -64,7 +68,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        {/*rem <img src="./images/italia2.svg" alt="Phone illustration" className="md:mt-40"/> 
+        {/*rem <img src="./images/other/italia2.svg" alt="Phone illustration" className="md:mt-40"/> 
         {/*rem <img src="https://assets.codepen.io/2621168/svgtest.svg" alt="Phone illustration" className="md:mt-40"/> 
         {/rem <img className="max-w-[200px] max-h-[300px]" src="plantrm.png" alt="hero"></img> 
       </div> */}

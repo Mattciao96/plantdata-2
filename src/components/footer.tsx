@@ -32,7 +32,7 @@ const universityLoghi: UniversityLogoProps[] = [
     url: "https://www.lifewatchitaly.eu",
     className: "dark:filter dark:brightness-0 dark:invert",
   },
-  
+
   {
     title: "University of Roma",
     image: "./images/loghi/sap-full.png",
@@ -119,7 +119,7 @@ export default function Footer() {
             {/* plantdata logo */}
             <div className=" flex justify-center items-center pt-8 md:pt-0">
               <img
-                src="./images/plantdata.png"
+                src="./images/other/plantdata.png"
                 className="filter brightness-0 dark:invert max-w-[min(200px,_60%)] md:max-w-[200px] h-auto"
                 alt=""
               />

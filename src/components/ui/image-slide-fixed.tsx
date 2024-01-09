@@ -3,23 +3,23 @@ const images = [
     firstrow: [
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
     ],
   },
@@ -27,23 +27,23 @@ const images = [
     secondrow: [
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
     ],
   },
@@ -51,23 +51,23 @@ const images = [
     thirdrow: [
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
       {
         title: "test",
-        url: "./images/test.jpg",
+        url: "./images/other/test.jpg",
       },
     ],
   },
@@ -79,71 +79,71 @@ export default function ImageScrollFixed() {
       <div className="relative my-1 flex justify-center md:rounded max-w-[100vw] md:w-[50vw] md:max-w-[600px] overflow-hidden max-h-[200px]">
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/map.png"
+          src="./images/other/map.png"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/aquil2.jpg"
+          src="./images/other/aquil2.jpg"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/planthero.png"
+          src="./images/other/planthero.png"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/gentia.jpg"
+          src="./images/other/gentia.jpg"
           alt=""
         />
       </div>
       <div className="relative my-1 flex justify-center md:rounded max-w-[100vw] md:w-[60vw] md:max-w-[700px] overflow-hidden max-h-[200px]">
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/aquil.jpg"
+          src="./images/other/aquil.jpg"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/gentia.jpg"
+          src="./images/other/gentia.jpg"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/planthero.png"
+          src="./images/other/planthero.png"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/aquil2.jpg"
+          src="./images/other/aquil2.jpg"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/map.png"
+          src="./images/other/map.png"
           alt=""
         />
       </div>
       <div className="relative my-1 flex justify-center md:rounded max-w-[100vw] md:w-[50vw] md:max-w-[600px] overflow-hidden max-h-[200px]">
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/gentia.jpg"
+          src="./images/other/gentia.jpg"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/aquil.jpg"
+          src="./images/other/aquil.jpg"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/map.png"
+          src="./images/other/map.png"
           alt=""
         />
         <img
           className="min-h-[120px] max-h-[120px] h-[120px] w-auto max-w-none mx-1 rounded"
-          src="./images/aquil2.jpg"
+          src="./images/other/aquil2.jpg"
           alt=""
         />
       </div>
