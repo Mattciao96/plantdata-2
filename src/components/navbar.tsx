@@ -25,9 +25,13 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const components: { text: string; href: string }[] = [
-  {
+  /* {
     text: "nav-links.who-are-we",
     href: "who-are-we",
+  }, */
+  {
+    text: "nav-links.home",
+    href: "",
   },
   {
     text: "nav-links.resources",

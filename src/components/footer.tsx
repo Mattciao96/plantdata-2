@@ -57,13 +57,13 @@ const universityLoghi: UniversityLogoProps[] = [
     image: "./images/loghi/unibo.png",
     url: "https://www.unibo.it",
     className:
-      "max-h-[90px] md:max-h-[90px] dark:filter dark:brightness-0 dark:invert",
+      "max-h-[90px] md:max-h-[110px] dark:filter dark:brightness-0 dark:invert",
   },
   {
     title: "University of Pisa",
     image: "./images/loghi/pisa-full.png",
     url: "https://www.unipi.it/",
-    className: "max-h-[90px] md:max-h-[90px]",
+    className: "max-h-[90px] md:max-h-[110px]",
   },
 ];
 

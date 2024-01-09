@@ -6,7 +6,8 @@
   },
 
   "nav-links": {
-    "who-are-we": "Who we are",
+    "home": "Home",
+    "who-are-we": "Who are we",
     "resources": "Resources",
     "contacts": "Contacts"
   },
@@ -23,7 +24,7 @@
   "resources-button": "Visit the site",
   "floritaly": {
     "title": "Floritaly",
-    "description": "Floritaly is a farm that deals with the cultivation and sale of fruit and garden plants."
+    "description": "Floritaly lorem ipsum."
   },
   "wikiplantbase": {
     "title": "WikiPlantBase",
