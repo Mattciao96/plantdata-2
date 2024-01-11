@@ -20,8 +20,7 @@ export default function DiscoverSection() {
         </div>
         <div className="-mt-[100px] flex max-w-[500px] flex-col gap-4 md:mt-0 md:gap-2">
           <h3 className="text-center text-4xl md:text-left">Lorem title</h3>
-          <p>
-            {" "}
+          <p className="text-balance text-center md:text-left">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
             mollitia reiciendis rem molestias. Quod iusto amet minima sapiente
             nisi quidem vero? Fuga similique fugiat labore cupiditate voluptas
@@ -36,8 +35,8 @@ export default function DiscoverSection() {
       <div className="my-32 flex min-w-full flex-col-reverse items-center justify-evenly gap-4 md:flex-row">
         <div className="-mt-[100px] flex max-w-[500px] flex-col gap-4 md:mt-0 md:gap-2">
           <h3 className="text-center text-4xl md:text-left">Lorem title</h3>
-          <p>
-            {" "}
+          <p  className="text-balance text-center md:text-left">
+          
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
             mollitia reiciendis rem molestias. Quod iusto amet minima sapiente
             nisi quidem vero? Fuga similique fugiat labore cupiditate voluptas
@@ -58,8 +57,8 @@ export default function DiscoverSection() {
         </div>
         <div className="flex max-w-[500px] flex-col gap-4 md:gap-2 ">
           <h3 className="text-center text-4xl md:text-left">Lorem title</h3>
-          <p>
-            {" "}
+          <p  className="text-balance text-center md:text-left">
+          
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
             mollitia reiciendis rem molestias. Quod iusto amet minima sapiente
             nisi quidem vero? Fuga similique fugiat labore cupiditate voluptas
