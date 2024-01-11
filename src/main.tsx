@@ -11,7 +11,6 @@ import WhoAreWe from "@/routes/who-are-we";
 import Resources from "@/routes/resources";
 import ErrorPage from "@/error-page";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,11 +47,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Suspense fallback="...is loading">
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+      <Suspense fallback="">
         <RouterProvider router={router} />
-        
-      </ThemeProvider>
-    </Suspense>
+      </Suspense>
+    </ThemeProvider>
   </React.StrictMode>
 );

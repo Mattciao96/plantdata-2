@@ -145,7 +145,7 @@ export default function Footer() {
 function UniversityLogo({ data }: { data: UniversityLogoProps }) {
   const { title, image, url, className } = data;
   return (
-    <div className="md:w-52 md:max-h-24 w-[48%] max-w-[220px] h-auto p-2 relative border border-muted rounded-md flex items-center justify-center">
+    <div className="md:w-52 md:max-h-24 w-[48%] max-w-[220px] h-auto md:min-h-[120px] p-2 relative border border-muted rounded-md flex items-center justify-center">
       <a href={url} className="absolute inset-0 z-10" aria-label={title} />
       <img src={image} className={cn("", className)} alt={title} />
     </div>
