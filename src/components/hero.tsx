@@ -7,18 +7,18 @@ export default function HeroSection() {
     <div className="flex flex-col justify-evenly md:flex-row">
       <div className=" mt-10 text-justify md:mt-20 md:text-left">
         {i18n.resolvedLanguage === "en" && (
-          <h1 className="text-title -mx-4  text-center font-medium text-[#3ecf8e] md:text-left">
+          <h1 className="text-title -mx-4 text-center  font-medium text-[#3ecf8e] md:mx-0 md:text-left">
             {t("home-title")}
           </h1>
         )}
-        <h2 className="text-title -mx-4 text-center font-medium md:text-left">
+        <h2 className="text-title -mx-4 text-center font-medium md:mx-0 md:text-left">
           {t("home-subtitle.part1")}
         </h2>
-        <h2 className="text-title -mx-4 text-center font-medium md:text-left">
+        <h2 className="text-title -mx-4 text-center font-medium md:mx-0 md:text-left">
           {t("home-subtitle.part2")}
         </h2>
         {i18n.resolvedLanguage === "it" && (
-          <h1 className="text-title -mx-4 text-center font-medium text-[#3ecf8e] md:text-left">
+          <h1 className="text-title -mx-4 text-center font-medium text-[#3ecf8e] md:mx-0 md:text-left">
             {t("home-title")}
           </h1>
         )}
