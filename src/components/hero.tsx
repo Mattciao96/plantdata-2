@@ -22,7 +22,7 @@ export default function HeroSection() {
             {t("home-title")}
           </h1>
         )}
-        <p className="pt-8 md:py-4 m-auto md:m-0 max-w-md text-justify md:text-left md:pl-1">
+        <p className="pt-8 md:py-4 m-auto md:m-0 max-w-md text-center text-balance md:text-left md:pl-1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
           repellendus sit quia commodi illum quod voluptatibus? Reprehenderit,
           odio consequatur. Magnam vero laudantium perferendis provident facilis
