@@ -105,26 +105,26 @@ const contacts: ContactProps[] = [
 
 export default function Footer() {
   return (
-    <footer className="py-6 border-t border-input bg-muted">
+    <footer className="border-t border-input bg-muted py-6">
       <div className="container">
         {/* rest */}
         <div className="flex flex-col gap-4">
           {/* da buttare dentro un div per con margini ai lati per rendere fisso il numero di loghi */}
-          <div className="flex justify-center flex-row flex-wrap gap-2 md:gap-6">
+          <div className="flex flex-row flex-wrap justify-center gap-2 md:gap-6">
             {universityLoghi.map((data, index) => (
               <UniversityLogo key={index} data={data} />
             ))}
           </div>
-          <div className="flex justify-center items-center flex-col md:flex-row flex-wrap md:gap-[4rem]">
+          <div className="flex flex-col flex-wrap items-center justify-center md:flex-row md:gap-[4rem]">
             {/* plantdata logo */}
-            <div className=" flex justify-center items-center pt-8 md:pt-0">
+            <div className=" flex items-center justify-center pt-8 md:pt-0">
               <img
                 src="./images/other/plantdata.png"
-                className="filter brightness-0 dark:invert max-w-[min(200px,_60%)] md:max-w-[200px] h-auto"
+                className="h-auto max-w-[min(200px,_60%)] brightness-0 filter dark:invert md:max-w-[200px]"
                 alt=""
               />
             </div>
-            <div className="py-8 flex justify-center flex-row flex-wrap gap-y-0 gap-[4rem]">
+            <div className="flex flex-row flex-wrap justify-center gap-[4rem] gap-y-0 py-8">
               {contacts.map((data, index) => (
                 <Contact key={index} data={data} />
               ))}
@@ -132,7 +132,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-input flex justify-center gap-8">
+        <div className="flex justify-center gap-8 border-t border-input pt-6">
           {socialLoghi.map((data, index) => (
             <SocialLogo key={index} data={data} />
           ))}
@@ -145,7 +145,7 @@ export default function Footer() {
 function UniversityLogo({ data }: { data: UniversityLogoProps }) {
   const { title, image, url, className } = data;
   return (
-    <div className="md:w-52 md:max-h-24 w-[48%] max-w-[220px] h-auto md:min-h-[120px] p-2 relative border border-muted rounded-md flex items-center justify-center">
+    <div className="relative flex h-auto w-[48%] max-w-[220px] items-center justify-center rounded-md border border-muted p-2 md:max-h-24 md:min-h-[120px] md:w-52">
       <a href={url} className="absolute inset-0 z-10" aria-label={title} />
       <img src={image} className={cn("", className)} alt={title} />
     </div>
@@ -155,7 +155,7 @@ function UniversityLogo({ data }: { data: UniversityLogoProps }) {
 function SocialLogo({ data }: { data: SocialLogoProps }) {
   const { title, image, url, className } = data;
   return (
-    <div className="w-12 h-12 p-2 relative border border-muted rounded-md flex items-center justify-center">
+    <div className="relative flex h-12 w-12 items-center justify-center rounded-md border border-muted p-2">
       <a href={url} className="absolute inset-0 z-10" aria-label={title} />
       <img src={image} className={cn("", className)} alt={title} />
     </div>
@@ -165,7 +165,7 @@ function SocialLogo({ data }: { data: SocialLogoProps }) {
 function Contact({ data }: { data: ContactProps }) {
   const { role, name, university, email } = data;
   return (
-    <div className="w-auto h-40 border border-muted rounded-md flex items-center justify-center">
+    <div className="flex h-40 w-auto items-center justify-center rounded-md border border-muted">
       <div className="flex flex-col gap-2 md:pl-4">
         <h2 className="text-3xl">{role}</h2>
         <p className="text-secondary-foreground">{name}</p>

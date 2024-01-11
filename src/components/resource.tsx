@@ -32,7 +32,7 @@ export default function ResourceList() {
   return (
     <>
       <Title text={"resources-title"}></Title>
-      <main className="flex flex-col w-full">
+      <main className="flex w-full flex-col">
         {resourcesData.map((resource) => (
           <Resource
             title={resource.title}
@@ -50,15 +50,19 @@ export default function ResourceList() {
 function Resource({ title, description, image, link, button }) {
   const { t } = useTranslation();
   return (
-    <div className="min-w-full flex flex-col border border-input bg-muted rounded-xl md:flex-row justify-evenly items-center gap-4 p-6 md:my-14 first:mt-0 mb-20">
-      <div className="p-0 md:px-12 py-4 relative flex justify-evenly items-center ">
+    <div className="mb-20 flex min-w-full flex-col items-center justify-evenly gap-4 rounded-xl border border-input bg-muted p-6 first:mt-0 md:my-14 md:flex-row">
+      <div className="relative flex items-center justify-evenly p-0 py-4 md:px-12 ">
         {/* <Globe className="w-[100px] h-[100px] text-[#3ecf8e] dark:text-[#3ecf8e]" /> */}
-        <img src={image} alt={t(title)} className="object-contain w-[300px] h-[300px]"/>
+        <img
+          src={image}
+          alt={t(title)}
+          className="h-[300px] w-[300px] object-contain"
+        />
       </div>
-      <div className="flex flex-col md:w-[60%] gap-4 md:gap-2 md:px-4">
-        <h3 className="text-4xl text-center md:text-left">{t(title)}</h3>
+      <div className="flex flex-col gap-4 md:w-[60%] md:gap-2 md:px-4">
+        <h3 className="text-center text-4xl md:text-left">{t(title)}</h3>
         <p>{t(description)}</p>
-        <div className="flex justify-center md:justify-start py-2">
+        <div className="flex justify-center py-2 md:justify-start">
           <a href={link}>
             <Button>{t(button)}</Button>
           </a>

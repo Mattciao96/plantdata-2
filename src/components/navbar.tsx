@@ -49,10 +49,10 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-20 border-b border-input shadow-sm">
       <NavigationMenu
-        className="min-h-[3.4rem] container flex justify-between max-w relative z-50
+        className="max-w container relative z-50 flex min-h-[3.4rem] justify-between
       bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
       >
-        <div className="p-[4px] flex items-center">
+        <div className="flex items-center p-[4px]">
           {/* <img src="plantdata.png" alt="PlantData logo" /> */}
           <Leaf className="h-9 w-9 text-[#3ecf8e]" />
           <Link
@@ -66,14 +66,14 @@ export default function Navbar() {
           </Link>
         </div>
         {/* this is for desktop */}
-        <NavigationMenuList className="p-3 hidden md:flex">
+        <NavigationMenuList className="hidden p-3 md:flex">
           {components.map((component, index) => (
             <NavigationMenuItem key={index}>
               <Link to={component.href}>
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    "bg-transparent hover:bg-secondary/90 hover:backdrop-blur hover:supports-[backdrop-filter]:bg-secondary/60"
+                    "bg-transparent hover:bg-secondary/90 hover:backdrop-blur hover:supports-[backdrop-filter]:bg-secondary/60",
                   )}
                 >
                   {t(component.text)}
@@ -83,7 +83,7 @@ export default function Navbar() {
           ))}
           {/* options */}
           <NavigationMenuItem>
-            <div className="px-4 flex gap-6 justify-center">
+            <div className="flex justify-center gap-6 px-4">
               <ModeToggle />
 
               <LanguageSwitcher />
@@ -109,7 +109,7 @@ export default function Navbar() {
 
 function NavOptionButtons() {
   return (
-    <div className="px-4 flex gap-6 justify-center items-end">
+    <div className="flex items-end justify-center gap-6 px-4">
       <ModeToggle />
       <LanguageSwitcher />
     </div>

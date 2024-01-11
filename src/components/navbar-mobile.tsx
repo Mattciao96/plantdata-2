@@ -21,12 +21,12 @@ export function MobileNav({ items, onClick, children }: MobileNavProps) {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
       className={cn(
-        "fixed inset-0 bottom-16 -z-10 grid min-h-[100dvh] grid-flow-row overflow-auto shadow-md md:hidden"
+        "fixed inset-0 bottom-16 -z-10 grid min-h-[100dvh] grid-flow-row overflow-auto shadow-md md:hidden",
       )}
     >
       {/* hide overscroll GOLDDDD */}
       <div className="fixed top-0 min-h-[3.4rem] w-full min-w-full bg-background"></div>
-      <div className="relative pt-24 pb-4 px-10 h-max-content min-h-[100dvh] -z-10 grid gap-6 bg-background  text-popover-foreground shadow-md">
+      <div className="h-max-content relative -z-10 grid min-h-[100dvh] gap-6 bg-background px-10 pb-4 pt-24  text-popover-foreground shadow-md">
         <nav className="grid grid-flow-row auto-rows-max ">
           {items.map((item, index) => (
             <motion.div
@@ -39,7 +39,7 @@ export function MobileNav({ items, onClick, children }: MobileNavProps) {
                 key={index}
                 to={item.href}
                 className={cn(
-                  "flex items-center rounded-md py-3 pl-9 pr-2 text-2xl font-medium hover:underline"
+                  "flex items-center rounded-md py-3 pl-9 pr-2 text-2xl font-medium hover:underline",
                 )}
                 onClick={() => onClick(false)}
               >
