@@ -49,7 +49,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-20 border-b border-input shadow-sm">
       <NavigationMenu
-        className="max-w container relative z-50 flex min-h-[3.4rem] justify-between
+        className="max-w container-fluid relative z-50 flex min-h-[3.4rem] justify-between
       bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
       >
         <div className="flex items-center p-[4px]">
