@@ -40,7 +40,21 @@ RUN npm install
 COPY . .
 
 # expose port 5173 to tell Docker that the container listens on the specified network ports at runtime
-EXPOSE 5173
+# EXPOSE 5173
 
 # command to run the app
-CMD npm run dev
+# CMD npm run dev
+RUN npm run build
+
+# Use Nginx as the production server
+FROM nginx:alpine
+
+
+# Copy the built React app to Nginx's web server directory
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port 80 for the Nginx server
+EXPOSE 80
+
+# Start Nginx when the container runs
+CMD ["nginx", "-g", "daemon off;"]
