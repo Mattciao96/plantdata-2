@@ -57,13 +57,13 @@ const universityLoghi: UniversityLogoProps[] = [
     image: "./images/loghi/unibo.png",
     url: "https://www.unibo.it",
     className:
-      "max-h-[90px] md:max-h-[110px] dark:filter dark:brightness-0 dark:invert",
+      "max-h-[90px] md:max-h-[100px] dark:filter dark:brightness-0 dark:invert",
   },
   {
     title: "University of Pisa",
     image: "./images/loghi/pisa-full.png",
     url: "https://www.unipi.it/",
-    className: "max-h-[90px] md:max-h-[110px]",
+    className: "max-h-[90px] md:max-h-[100px]",
   },
 ];
 
@@ -108,9 +108,9 @@ export default function Footer() {
     <footer className="py-6 border-t border-input bg-muted">
       <div className="container">
         {/* rest */}
-        <div>
+        <div className="flex flex-col gap-4">
           {/* da buttare dentro un div per con margini ai lati per rendere fisso il numero di loghi */}
-          <div className="flex justify-center flex-row flex-wrap gap-2 md:gap-8">
+          <div className="flex justify-center flex-row flex-wrap gap-2 md:gap-6">
             {universityLoghi.map((data, index) => (
               <UniversityLogo key={index} data={data} />
             ))}
