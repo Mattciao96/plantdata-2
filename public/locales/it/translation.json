@@ -1,5 +1,5 @@
 {
- "home-title": "PlantData",
+  "home-title": "PlantData",
   "home-subtitle": {
     "part1": "Centro",
     "part2": "Interuniversitario"
@@ -29,7 +29,7 @@
     "title": "WikiPlantBase",
     "description": "WikiPlantBase è un database di piante che raccoglie informazioni su oltre 1000 specie diverse."
   },
-  "italic" : {
+  "italic": {
     "title": "Italic",
     "description": "Italic è un sito che raccoglie informazioni su licheni."
   },
@@ -37,6 +37,4 @@
     { "name": "Matteo", "role": "Boh", "email": "jhdhjdhj@gmaial.com" },
     { "name": "Matteo2", "role": "Boh", "email": "jhdhjdhj@gmaial.com" }
   ]
-}
-  
 }
