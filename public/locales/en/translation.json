@@ -30,8 +30,12 @@
     "title": "WikiPlantBase",
     "description": "WikiPlantBase is a plant database that collects information on over 1000 different species."
   },
-  "italic" : {
+  "italic": {
     "title": "Italic",
     "description": "Italic is a site that collects information on lichens."
-  }
+  },
+  "contsacts-data": [
+    { "name": "Matteo", "role": "Boh", "email": "jhdhjdhj@gmaial.com" },
+    { "name": "Matteo2", "role": "Boh", "email": "jhdhjdhj@gmaial.com" }
+  ]
 }

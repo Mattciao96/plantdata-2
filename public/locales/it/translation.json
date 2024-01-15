@@ -32,6 +32,11 @@
   "italic" : {
     "title": "Italic",
     "description": "Italic è un sito che raccoglie informazioni su licheni."
-  }
+  },
+  "contsacts-data": [
+    { "name": "Matteo", "role": "Boh", "email": "jhdhjdhj@gmaial.com" },
+    { "name": "Matteo2", "role": "Boh", "email": "jhdhjdhj@gmaial.com" }
+  ]
+}
   
 }
