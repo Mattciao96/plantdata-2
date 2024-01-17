@@ -1,10 +1,4 @@
 {
-  "home-title": "PlantData",
-  "home-subtitle": {
-    "part1": "Interuniversity",
-    "part2": "Center"
-  },
-
   "nav-links": {
     "home": "Home",
     "who-are-we": "Who are we",
@@ -20,22 +14,56 @@
     "en": "English",
     "it": "Italian"
   },
-  "resources-title": "Resources",
-  "resources-button": "Visit the site",
-  "floritaly": {
-    "title": "Floritaly",
-    "description": "Floritaly lorem ipsum."
+  "home-title": "PlantData",
+  "home-subtitle": {
+    "part1": "Interuniversity",
+    "part2": "Center"
   },
-  "wikiplantbase": {
-    "title": "WikiPlantBase",
-    "description": "WikiPlantBase is a plant database that collects information on over 1000 different species."
+  "hero": {
+    "title": "PlantData",
+    "subtitle": {
+      "part1": "Interuniversity",
+      "part2": "Center"
+    },
+    "description": "Plant Data is an inter-university research center devoted to plant diversity and big data, founded in 2021. Plant Data aims at studying novel approaches and develop new tools for producing, managing and analysing plant biodiversity data.",
+    "button": "Explore"
   },
-  "italic": {
-    "title": "Italic",
-    "description": "Italic is a site that collects information on lichens."
+  "resources": {
+    "title": "Resources",
+    "description": "Plant Data contributes to the development of several resources, from databases to tools for research data retrieval. These resources are and will be always available online to everybody.",
+    "button": "Explore",
+    "floritaly": {
+      "title": "Floritaly",
+      "description": "FlorItaly organises nomenclatural and distributional data from the recent checklists of the Italian native and alien vascular plants (and their subsequent updates), with links to resources from other projects.",
+      "button": "Visit the site"
+    },
+    "wikiplantbase": {
+      "title": "WikiPlantBase",
+      "description": "The Wikiplantbase #Italia project intends to foster the collection of and access to floristic data for Italy, with a freely accessible interface open to everyone's contribution.",
+      "button": "Visit the site"
+    },
+    "italic": {
+      "title": "Italic",
+      "description": "ITALIC, the Information System on Italian Lichens, makes available data and digital resources. Most of the data are derived from the Checklist by Nimis (2016) and are being continuously updated online. ITALIC also exposes digital identification keys.",
+      "button": "Visit the site"
+    },
+    "github": {
+      "title": "GitHub",
+      "description": "Plant Data is an open source project. All the code is available on GitHub.",
+      "button": "Go to github"
+    }
   },
-  "contsacts-data": [
-    { "name": "Matteo", "role": "Boh", "email": "jhdhjdhj@gmaial.com" },
-    { "name": "Matteo2", "role": "Boh", "email": "jhdhjdhj@gmaial.com" }
+
+  "contacts": [
+    {
+      "name": "Stefano Martellos",
+      "role": "coordinator",
+      "email": "martelst@units.it"
+    },
+    {
+      "name": "Jury Nascimbene",
+      "role": "secretary",
+      "email": "juri.nascimbene@unibo.it"
+    }
   ]
 }

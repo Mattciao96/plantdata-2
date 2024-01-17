@@ -1,9 +1,4 @@
 {
-  "home-title": "PlantData",
-  "home-subtitle": {
-    "part1": "Centro",
-    "part2": "Interuniversitario"
-  },
   "nav-links": {
     "home": "Home",
     "who-are-we": "Chi siamo",
@@ -19,22 +14,50 @@
     "en": "Inglese",
     "it": "Italiano"
   },
-  "resources-title": "Risorse",
-  "resources-button": "Visita il sito",
-  "floritaly": {
-    "title": "Floritaly",
-    "description": "Floritaly lorem ipsum."
+  "hero": {
+    "title": "PlantData",
+    "subtitle": {
+      "part1": "Centro",
+      "part2": "Interuniversitario"
+    },
+    "description": "Plant Data è un centro interuniversitario di ricerca per biodiversità vegetale e i big data nato nel 2021. Ha lo scopo di studiare nuovi approcci e sviluppare strumenti innovativi per la produzione, gestione e analisi dei dati di biodiversità vegetale.",
+    "button": "Esplora"
   },
-  "wikiplantbase": {
-    "title": "WikiPlantBase",
-    "description": "WikiPlantBase è un database di piante che raccoglie informazioni su oltre 1000 specie diverse."
+  "resources": {
+    "title": "Risorse",
+    "description": "Plant Data contribuisce allo sviluppo di diverse risorse, dai database agli strumenti per l’ottenimento di dati per la ricerca. Queste risorse sono e sempre saranno disponibili online a tutti.",
+    "button": "Esplora",
+    "floritaly": {
+      "title": "Floritaly",
+      "description": "FlorItaly organizza i dati nomenclaturali e distributivi derivanti dalle recenti checklist delle piante native e aliene d’Italia (e dei loro successivi aggiornamenti), con collegamenti a risorse provenienti da altri progetti.",
+      "button": "Visita is sito"
+    },
+    "wikiplantbase": {
+      "title": "WikiPlantBase",
+      "description": "Il progetto Wikiplantbase #Italia intende facilitare la raccolta e la consultazione di dati floristici per l'Italia, con un'interfaccia liberamente accessibile ed aperta al contributo di tutti.",
+      "button": "Visita is sito"
+    },
+    "italic": {
+      "title": "Italic",
+      "description": "ITALIC, il Sistema Informativo sui Licheni d’Italia, rende disponibili dati e risorse digitali. La maggior parte dei dati derivano dalla Checklist di Nimis (2016) e vengono continuamente aggiornati online. ITALIC rende disponibili anche chiavi digitali di identificazione.",
+      "button": "Visita is sito"
+    },
+    "github": {
+      "title": "GitHub",
+      "description": "Plant Data è un progetto open source. Tutti i nostri progetti sono disponibili su GitHub.",
+      "button": "Vai su github"
+    }
   },
-  "italic": {
-    "title": "Italic",
-    "description": "Italic è un sito che raccoglie informazioni su licheni."
-  },
-  "contsacts-data": [
-    { "name": "Matteo", "role": "Boh", "email": "jhdhjdhj@gmaial.com" },
-    { "name": "Matteo2", "role": "Boh", "email": "jhdhjdhj@gmaial.com" }
+  "contacts": [
+    {
+      "name": "Stefano Martellos",
+      "role": "cordinatore",
+      "email": "martelst@units.it"
+    },
+    {
+      "name": "Jury Nascimbene",
+      "role": "segretario",
+      "email": "juri.nascimbene@unibo.it"
+    }
   ]
 }
