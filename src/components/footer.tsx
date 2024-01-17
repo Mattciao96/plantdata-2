@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 type UniversityLogoProps = {
   title: string;
@@ -15,7 +16,6 @@ type SocialLogoProps = {
 type ContactProps = {
   role: string;
   name: string;
-  university: string;
   email: string;
 };
 
@@ -73,33 +73,19 @@ const socialLoghi: SocialLogoProps[] = [
     image: "./images/loghi/github-mark.svg",
     url: "https://www.units.it",
     className: "filter brightness-0 dark:invert",
-  },
-  {
-    title: "Plantdata Github",
-    image: "./images/loghi/github-mark.svg",
-    url: "https://www.units.it",
-    className: "filter brightness-0 dark:invert",
-  },
-  {
-    title: "Plantdata Github",
-    image: "./images/loghi/github-mark.svg",
-    url: "https://www.units.it",
-    className: "filter brightness-0 dark:invert",
-  },
+  }
 ];
 // an array of objects with role, name, university, email
 const contacts: ContactProps[] = [
   {
-    role: "Lorem role",
-    name: "Lorem ipsum",
-    university: "University of Trieste",
-    email: "lorem@lorem.com",
+    role: "contacts.people[0].role",
+    name: "contacts.people[0].name",
+    email: "contacts.people[0].name",
   },
   {
-    role: "Lorem role",
-    name: "Lorem ipsum",
-    university: "University of Trieste",
-    email: "lorem@lorem.com",
+    role: "contacts.people[1].role",
+    name: "contacts.people[1].name",
+    email: "contacts.people[1].name",
   },
 ];
 
@@ -163,14 +149,14 @@ function SocialLogo({ data }: { data: SocialLogoProps }) {
 }
 
 function Contact({ data }: { data: ContactProps }) {
-  const { role, name, university, email } = data;
+  const { t } = useTranslation();
+  const { role, name, email } = data;
   return (
     <div className="flex h-40 w-auto items-center justify-center rounded-md border border-muted">
       <div className="flex flex-col gap-2 md:pl-4">
-        <h2 className="text-3xl">{role}</h2>
-        <p className="text-secondary-foreground">{name}</p>
-        <p className="text-secondary-foreground">{university}</p>
-        <p className="text-secondary-foreground">{email}</p>
+        <h2 className="text-3xl">{t(role)}</h2>
+        <p className="text-secondary-foreground">{t(name)}</p>
+        <p className="text-secondary-foreground">{t(email)}</p>
       </div>
     </div>
   );

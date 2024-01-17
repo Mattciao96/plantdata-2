@@ -1,30 +1,29 @@
 import { Button } from "./ui/button";
-import { Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Title from "./ui/title";
 
 // data from locales translation.json
 const resourcesData = [
   {
-    title: "floritaly.title",
+    title: "resources.floritaly.title",
     image: "images/sites/floritalylogo.png",
-    description: "floritaly.description",
+    description: "resources.floritaly.description",
     link: "https://dryades.units.it/floritaly",
-    button: "resources-button",
+    button: "resources.floritaly.button",
   },
   {
-    title: "wikiplantbase.title",
+    title: "resources.wikiplantbase.title",
     image: "images/sites/wpb.jpg",
-    description: "wikiplantbase.description",
+    description: "resources.wikiplantbase.description",
     link: "https://wikiplantbase.org/",
-    button: "resources-button",
+    button: "resources.wikiplantbase.button",
   },
   {
-    title: "italic.title",
+    title: "resources.italic.title",
     image: "images/sites/italic.png",
-    description: "italic.description",
+    description: "resources.italic.description",
     link: "https://italic.units.it",
-    button: "resources-button",
+    button: "resources.italic.button",
   },
 ];
 

@@ -8,28 +8,25 @@ export default function HeroSection() {
       <div className=" mt-10 text-justify md:mt-20 md:text-left">
         {i18n.resolvedLanguage === "en" && (
           <h1 className="text-title -mx-4 text-center  font-medium text-[#3ecf8e] md:mx-0 md:text-left">
-            {t("home-title")}
+            {t("hero.title")}
           </h1>
         )}
         <h2 className="text-title -mx-4 text-center font-medium md:mx-0 md:text-left">
-          {t("home-subtitle.part1")}
+          {t("hero.subtitle.part1")}
         </h2>
         <h2 className="text-title -mx-4 text-center font-medium md:mx-0 md:text-left">
-          {t("home-subtitle.part2")}
+          {t("hero.subtitle.part2")}
         </h2>
         {i18n.resolvedLanguage === "it" && (
           <h1 className="text-title -mx-4 text-center font-medium text-[#3ecf8e] md:mx-0 md:text-left">
-            {t("home-title")}
+            {t("hero.title")}
           </h1>
         )}
         <p className="m-auto max-w-md text-balance pt-8 text-center md:m-0 md:py-4 md:pl-1 md:text-left">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-          repellendus sit quia commodi illum quod voluptatibus? Reprehenderit,
-          odio consequatur. Magnam vero laudantium perferendis provident facilis
-          aperiam omnis quam, fuga corporis!
+          {t("hero.description")}
         </p>
         <div className="flex justify-center py-2 md:justify-start md:pl-1">
-          <Button>Risorse</Button>
+          <Button>{t("hero.button")}</Button>
         </div>
       </div>
       {/* <div className="hidden md:mt-28 md:block w-full h-full max-h-[500px] max-w-[500px]">
