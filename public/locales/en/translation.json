@@ -14,11 +14,6 @@
     "en": "English",
     "it": "Italian"
   },
-  "home-title": "PlantData",
-  "home-subtitle": {
-    "part1": "Interuniversity",
-    "part2": "Center"
-  },
   "hero": {
     "title": "PlantData",
     "subtitle": {
@@ -27,6 +22,11 @@
     },
     "description": "Plant Data is an inter-university research center devoted to plant diversity and big data, founded in 2021. Plant Data aims at studying novel approaches and develop new tools for producing, managing and analysing plant biodiversity data.",
     "button": "Explore"
+  },
+  "about-us": {
+    "title": "Who are we",
+    "description": "Plant Data was originally founded by a core group of six Italian universities: Bologna, Camerino, Perugia, Pisa, Roma (La Sapienza), Trieste.",
+    "button": "Discover more"
   },
   "resources": {
     "title": "Resources",
@@ -54,16 +54,20 @@
     }
   },
 
-  "contacts": [
-    {
-      "name": "Stefano Martellos",
-      "role": "coordinator",
-      "email": "martelst@units.it"
-    },
-    {
-      "name": "Jury Nascimbene",
-      "role": "secretary",
-      "email": "juri.nascimbene@unibo.it"
-    }
-  ]
+  "contacts": {
+    "title:": "Contacts",
+    "description": "For information on Plant Data you can contact the coordinator, prof. Stefano Martellos (martelst@units.it) or the secretary, prof. Jury Nascimbene (juri.nascimbene@unibo.it).",
+    "people": [
+      {
+        "name": "Stefano Martellos",
+        "role": "coordinator",
+        "email": "martelst@units.it"
+      },
+      {
+        "name": "Jury Nascimbene",
+        "role": "secretary",
+        "email": "juri.nascimbene@unibo.it"
+      }
+    ]
+  }
 }

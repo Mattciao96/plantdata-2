@@ -21,7 +21,8 @@
       "part2": "Interuniversitario"
     },
     "description": "Plant Data è un centro interuniversitario di ricerca per biodiversità vegetale e i big data nato nel 2021. Ha lo scopo di studiare nuovi approcci e sviluppare strumenti innovativi per la produzione, gestione e analisi dei dati di biodiversità vegetale.",
-    "button": "Esplora"
+    "button": "Esplora",
+
   },
   "resources": {
     "title": "Risorse",
@@ -48,16 +49,20 @@
       "button": "Vai su github"
     }
   },
-  "contacts": [
-    {
-      "name": "Stefano Martellos",
-      "role": "cordinatore",
-      "email": "martelst@units.it"
-    },
-    {
-      "name": "Jury Nascimbene",
-      "role": "segretario",
-      "email": "juri.nascimbene@unibo.it"
-    }
-  ]
+  "contacts": {
+    "title": "Contatti",
+    "description": "Per informazioni su Plant Data potete contattare il coordinatore, prof. Stefano Martellos (martelst@units.it) o il segretario, prof. Jury Nascimbene (juri.nascimbene@unibo.it).",
+    "people": [
+      {
+        "name": "Stefano Martellos",
+        "role": "cordinatore",
+        "email": "martelst@units.it"
+      },
+      {
+        "name": "Jury Nascimbene",
+        "role": "segretario",
+        "email": "juri.nascimbene@unibo.it"
+      }
+    ]
+  }
 }
