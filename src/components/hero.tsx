@@ -22,7 +22,7 @@ export default function HeroSection() {
             {t("hero.title")}
           </h1>
         )}
-        <p className="m-auto max-w-md text-balance pt-8 text-center md:m-0 md:py-4 md:pl-1 md:text-left">
+        <p className="m-auto max-w-[580px] text-balance pt-8 text-center md:m-0 md:py-4 md:pl-1 md:text-left">
           {t("hero.description")}
         </p>
         <div className="flex justify-center py-2 md:justify-start md:pl-1">
@@ -66,7 +66,7 @@ export default function HeroSection() {
           </div>
         </div>
         {/*rem <img src="./images/other/italia2.svg" alt="Phone illustration" className="md:mt-40"/> 
-        {/*rem <img src="https://assets.codepen.io/2621168/svgtest.svg" alt="Phone illustration" className="md:mt-40"/> 
+        rem <img src="https://assets.codepen.io/2621168/svgtest.svg" alt="Phone illustration" className="md:mt-40"/> 
         {/rem <img className="max-w-[200px] max-h-[300px]" src="plantrm.png" alt="hero"></img> 
       </div> */}
     </div>

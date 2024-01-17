@@ -78,14 +78,14 @@ const socialLoghi: SocialLogoProps[] = [
 // an array of objects with role, name, university, email
 const contacts: ContactProps[] = [
   {
-    role: "contacts.people[0].role",
-    name: "contacts.people[0].name",
-    email: "contacts.people[0].name",
+    role: "contacts.people.0.role",
+    name: "contacts.people.0.name",
+    email: "contacts.people.0.email",
   },
   {
-    role: "contacts.people[1].role",
-    name: "contacts.people[1].name",
-    email: "contacts.people[1].name",
+    role: "contacts.people.1.role",
+    name: "contacts.people.1.name",
+    email: "contacts.people.1.email",
   },
 ];
 

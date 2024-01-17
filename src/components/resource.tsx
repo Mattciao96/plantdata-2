@@ -30,7 +30,7 @@ const resourcesData = [
 export default function ResourceList() {
   return (
     <>
-      <Title text={"resources-title"}></Title>
+      <Title text={"resources.title"}></Title>
       <main className="flex w-full flex-col">
         {resourcesData.map((resource) => (
           <Resource
@@ -39,6 +39,7 @@ export default function ResourceList() {
             image={resource.image}
             link={resource.link}
             button={resource.button}
+            key={resource.title}
           />
         ))}
       </main>
@@ -49,7 +50,7 @@ export default function ResourceList() {
 function Resource({ title, description, image, link, button }) {
   const { t } = useTranslation();
   return (
-    <div className="mb-20 flex min-w-full flex-col items-center justify-evenly gap-4 rounded-xl border border-input bg-muted p-6 first:mt-0 md:my-14 md:flex-row">
+    <div className="mb-20 flex min-w-full flex-col items-center justify-evenly gap-4 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-14 md:flex-row">
       <div className="relative flex items-center justify-evenly p-0 py-4 md:px-12 ">
         {/* <Globe className="w-[100px] h-[100px] text-[#3ecf8e] dark:text-[#3ecf8e]" /> */}
         <img
