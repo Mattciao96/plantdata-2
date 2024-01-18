@@ -9,6 +9,7 @@ import Root from "@/routes/root";
 import Home from "@/routes/home";
 import WhoAreWe from "@/routes/who-are-we";
 import Resources from "@/routes/resources";
+import Contacts from "@/routes/contacts";
 import ErrorPage from "@/error-page";
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         path: "resources",
         element: <Resources />,
       },
+      {
+        path: "contacts",
+        element: <Contacts />,
+      },
     ],
   },
 
@@ -46,11 +51,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <Suspense fallback="">
-        <RouterProvider router={router} />
-      </Suspense>
-    </ThemeProvider>
-  </React.StrictMode>
+  <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+    <Suspense fallback="">
+      <RouterProvider router={router} />
+    </Suspense>
+  </ThemeProvider>,
 );

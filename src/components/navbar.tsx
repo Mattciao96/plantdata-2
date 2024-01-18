@@ -7,15 +7,7 @@ import { MobileNav } from "./navbar-mobile";
 import { ModeToggle } from "./toggle-light-dark";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-/* import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"; */
+
 import {
   NavigationMenu,
   NavigationMenuItem,

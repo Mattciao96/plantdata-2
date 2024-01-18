@@ -44,7 +44,8 @@
 
   .dark {
     /* --background: 222.2 84% 4.9%; */
-    --background: 195, 84%, 10%;
+    /* --background: 195, 84%, 10%; */
+    --background: 229, 84%, 5%;
     --foreground: 210 40% 98%;
 
     --background-pure: 204, 48%, 20%;
@@ -93,7 +94,7 @@
 }
 
 .ta {
-  color: hsl(194, 85%, 5%);
+  color: hsl(229, 84%, 5%);
 }
 
 @layer base {

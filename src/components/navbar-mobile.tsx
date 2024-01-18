@@ -8,6 +8,7 @@ import { useLockBody } from "@/hooks/use-lock-body.ts";
 
 interface MobileNavProps {
   items: { text: string; href: string }[];
+  onClick: (value: boolean) => void;
   children?: React.ReactNode;
 }
 

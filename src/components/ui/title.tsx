@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-export default function Title({ text}) {
+export default function Title({ text }: { text: string }) {
   const { t } = useTranslation();
 
   return (
