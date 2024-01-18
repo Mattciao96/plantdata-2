@@ -53,6 +53,7 @@ function UniversityListGet() {
             <University
               title={university.university}
               link={university.website}
+              logo={university.logo}
               pointOfContact={university.point_of_contact}
               email={university.email}
               key={university.id}
@@ -64,27 +65,30 @@ function UniversityListGet() {
   );
 }
 
-function University({ title, link, pointOfContact, email }) {
+function University({ title, link, logo, pointOfContact, email }) {
   //const { t } = useTranslation();
   return (
-    <div className="mb-20 flex min-w-full flex-col items-center justify-evenly gap-4 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-14 md:flex-row">
-      <div className="relative flex items-center justify-evenly p-0 py-4 md:px-12 ">
-        {/* <Globe className="w-[100px] h-[100px] text-[#3ecf8e] dark:text-[#3ecf8e]" /> */}
-        {/* <img
-          src={image}
-          alt={t(title)}
-          className="h-[300px] w-[300px] object-contain"
-        /> */}
-        <div></div>
-      </div>
-      <div className="flex flex-col gap-4 md:w-[60%] md:gap-2 md:px-4">
-        <h3 className="text-center text-4xl md:text-left">{title}</h3>
-        <p>{pointOfContact}</p>
-        <p>{email}</p>
-        <div className="flex justify-center py-2 md:justify-start">
-          <a href={link}>
-            <Button>Go</Button>
-          </a>
+    <div className="min-w-full flex justify-center">
+      <div className="mb-20 flex w-[900px] flex-col items-center justify-evenly gap-4 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-14 md:flex-row">
+        <div className="relative flex items-center justify-evenly p-0 py-4 md:px-12">
+          <img
+            src={`images/loghi/${logo}`}
+            alt={title}
+            className="h-[200px] w-[200px] object-contain"
+          />
+        </div>
+        <div className="flex flex-col gap-4 md:w-[60%] md:gap-2 md:px-4">
+          <h3 className="text-center text-2xl md:text-left">{title}</h3>
+          <p className="text-center md:text-left">
+            {pointOfContact}
+            <br />
+            {email}
+          </p>
+          <div className="flex justify-center py-2 md:justify-start">
+            <a href={link}>
+              <Button>Go to the website</Button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
