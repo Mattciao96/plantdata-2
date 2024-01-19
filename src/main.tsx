@@ -11,6 +11,7 @@ import WhoAreWe from "@/routes/who-are-we";
 import Resources from "@/routes/resources";
 import Contacts from "@/routes/contacts";
 import ErrorPage from "@/error-page";
+import Spinner from "./components/ui/spinner";
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-    <Suspense fallback="">
+    <Suspense fallback={<div className="flex justify-center"><Spinner /></div>}>
       <RouterProvider router={router} />
     </Suspense>
   </ThemeProvider>,

@@ -73,7 +73,7 @@ const socialLoghi: SocialLogoProps[] = [
     image: "./images/loghi/github-mark.svg",
     url: "https://www.units.it",
     className: "filter brightness-0 dark:invert",
-  }
+  },
 ];
 // an array of objects with role, name, university, email
 const contacts: ContactProps[] = [
@@ -106,11 +106,11 @@ export default function Footer() {
             <div className=" flex items-center justify-center pt-8 md:pt-0">
               <img
                 src="./images/other/plantdata.png"
-                className="h-auto max-w-[min(200px,_60%)] brightness-0 filter dark:invert md:max-w-[200px]"
+                className="h-auto max-w-[min(150px,_60%)] brightness-0 filter dark:invert md:max-w-[150px]"
                 alt=""
               />
             </div>
-            <div className="flex flex-row flex-wrap justify-center gap-[4rem] gap-y-0 py-8">
+            <div className="flex flex-row flex-wrap justify-center gap-[4rem] gap-y-6 md:gap-y-0 py-8">
               {contacts.map((data, index) => (
                 <Contact key={index} data={data} />
               ))}
@@ -152,11 +152,11 @@ function Contact({ data }: { data: ContactProps }) {
   const { t } = useTranslation();
   const { role, name, email } = data;
   return (
-    <div className="flex h-40 w-auto items-center justify-center rounded-md border border-muted">
-      <div className="flex flex-col gap-2 md:pl-4">
-        <h2 className="text-3xl">{t(role)}</h2>
-        <p className="text-secondary-foreground">{t(name)}</p>
-        <p className="text-secondary-foreground">{t(email)}</p>
+    <div className="flex w-auto items-start justify-center rounded-md border border-muted">
+      <div className="w-44 flex flex-col gap-2 pl-2 md:pl-4">
+        <h2 className="text-2xl">{t(role)}</h2>
+        <p className="pl-[2px] text-sm text-secondary-foreground">{t(name)}</p>
+        <p className="pl-[3px] text-sm text-secondary-foreground">{t(email)}</p>
       </div>
     </div>
   );
