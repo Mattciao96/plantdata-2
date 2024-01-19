@@ -44,7 +44,7 @@ export default function UniversityList() {
 function UniversityListGet() {
   const { status, data, error } = useUniversity();
   return (
-    <div>
+    <>
       {status === "pending" ? (
         <div className="flex justify-center">
           <Spinner />
@@ -65,7 +65,7 @@ function UniversityListGet() {
           ))}
         </>
       )}
-    </div>
+    </>
   );
 }
 
@@ -73,7 +73,7 @@ function University({ title, link, logo, pointOfContact, email }) {
   const { t } = useTranslation();
   return (
     <div className="flex min-w-full justify-center">
-      <div className="mb-20 flex w-[400px] flex-col items-center justify-evenly gap-1 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-14 md:w-[900px] md:flex-row md:gap-4">
+      <div className="mb-20 flex max-w-[400px] w-full flex-col items-center justify-evenly gap-1 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-14 md:max-w-[900px] md:flex-row md:gap-4">
         <div className="relative flex items-center justify-evenly p-0 py-4 md:px-12">
           <img
             src={`images/loghi/${logo}`}
