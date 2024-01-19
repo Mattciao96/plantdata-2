@@ -5,6 +5,7 @@ import { Globe } from "lucide-react";
 import CircleLogo from "./ui/circle";
 import { useTranslation } from "react-i18next";
 import ImageScrollFixed from "./ui/image-slide-fixed";
+import { Link } from "react-router-dom";
 
 // import * as React from "react";
 
@@ -28,16 +29,21 @@ export default function DiscoverSection() {
             {t("about-us.description")}
           </p>
           <div className="flex justify-center py-2  md:justify-start">
-            <Button>   {t("about-us.button")}</Button>
+            <Button asChild>
+              <Link to={"who-are-we"}>{t("about-us.button")}</Link>
+            </Button>
           </div>
         </div>
       </div>
       {/* SECTION 2 */}
       <div className="my-32 flex min-w-full flex-col-reverse items-center justify-evenly gap-4 md:flex-row">
         <div className="-mt-[100px] flex max-w-[500px] flex-col gap-4 md:mt-0 md:gap-2">
-          <h3 className="text-center text-4xl md:text-left">   {t("resources.title")}</h3>
+          <h3 className="text-center text-4xl md:text-left">
+            {" "}
+            {t("resources.title")}
+          </h3>
           <p className="text-balance text-center md:text-left">
-          {t("resources.description")}
+            {t("resources.description")}
           </p>
           <div className="flex justify-center py-2  md:justify-start">
             <Button>{t("resources.button")}</Button>
@@ -53,10 +59,12 @@ export default function DiscoverSection() {
           <Globe className="h-[100px] w-[100px] text-[#3ecf8e] dark:text-[#3ecf8e]" />
         </div>
         <div className="flex max-w-[500px] flex-col gap-4 md:gap-2 ">
-          <h3 className="text-center text-4xl md:text-left">{t("contacts.title")}</h3>
+          <h3 className="text-center text-4xl md:text-left">
+            {t("contacts.title")}
+          </h3>
           <p className="text-balance text-center md:text-left">
-          {t("contacts.description")}
-            </p>
+            {t("contacts.description")}
+          </p>
           {/* <div className="flex justify-center py-2 md:justify-start">
             <Button>{t("contacts.button")}</Button>
           </div> */}

@@ -23,6 +23,12 @@
     "description": "Plant Data è un centro interuniversitario di ricerca per biodiversità vegetale e i big data nato nel 2021. Ha lo scopo di studiare nuovi approcci e sviluppare strumenti innovativi per la produzione, gestione e analisi dei dati di biodiversità vegetale.",
     "button": "Esplora"
   },
+  "about-us": {
+    "title": "Chi siamo",
+    "description": "Plant Data è stato fondato da un gruppo iniziale di 6 Università Italiane: Bologna, Camerino, Perugia, Pisa, Roma (La Sapienza), Trieste.",
+    "button": "Scopri di più",
+    "uni-button": "Vai al sito"
+  },
   "resources": {
     "title": "Risorse",
     "description": "Plant Data contribuisce allo sviluppo di diverse risorse, dai database agli strumenti per l’ottenimento di dati per la ricerca. Queste risorse sono e sempre saranno disponibili online a tutti.",

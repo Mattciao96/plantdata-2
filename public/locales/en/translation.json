@@ -26,7 +26,8 @@
   "about-us": {
     "title": "Who are we",
     "description": "Plant Data was originally founded by a core group of six Italian universities: Bologna, Camerino, Perugia, Pisa, Roma (La Sapienza), Trieste.",
-    "button": "Discover more"
+    "button": "Discover more",
+    "uni-button": "Go to the website"
   },
   "resources": {
     "title": "Resources",

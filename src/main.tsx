@@ -36,6 +36,10 @@ const router = createBrowserRouter([
         path: "contacts",
         element: <Contacts />,
       },
+      {
+        path: "who-are-we",
+        element: <WhoAreWe />,
+      },
     ],
   },
 

@@ -10,6 +10,7 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Link } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
@@ -29,7 +30,7 @@ function useUniversity() {
 export default function UniversityList() {
   return (
     <>
-      <Title text={"resources.title"}></Title>
+      <Title text={"about-us.title"}></Title>
       <main className="flex w-full flex-col">
         <QueryClientProvider client={queryClient}>
           <UniversityListGet />
@@ -69,10 +70,10 @@ function UniversityListGet() {
 }
 
 function University({ title, link, logo, pointOfContact, email }) {
-  //const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="flex min-w-full justify-center">
-      <div className="mb-20 flex w-[900px] flex-col items-center justify-evenly gap-4 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-14 md:flex-row">
+      <div className="mb-20 flex w-[400px] flex-col items-center justify-evenly gap-1 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-14 md:w-[900px] md:flex-row md:gap-4">
         <div className="relative flex items-center justify-evenly p-0 py-4 md:px-12">
           <img
             src={`images/loghi/${logo}`}
@@ -80,18 +81,23 @@ function University({ title, link, logo, pointOfContact, email }) {
             className="h-[150px] w-[200px] object-contain"
           />
         </div>
-        <div className="flex flex-col gap-4 md:w-[60%] md:px-4 md:gap-0">
-          <h3 className="text-center text-xl md:text-left md:mb-4">{title}</h3>
-          <p className="text-sm font-medium">Reference:</p>
-          <p className="text-center md:text-left text-[14px] md:pl-1 md:mb-4">
-            {pointOfContact}
-            <br />
-            {email}
-          </p>
+        <div className="flex flex-col items-center gap-4 md:w-[60%] md:items-start md:gap-0 md:px-4">
+          <h3 className="max-w-[250px] text-center text-xl md:mb-4 md:max-w-full md:text-left">
+            {title}
+          </h3>
+          <div className="w-[146px]">
+            <p className="text-sm font-medium">Reference:</p>
+            <p className="pl-1 text-[14px] md:mb-4 ">
+              {pointOfContact}
+              <br />
+              {email}
+            </p>
+          </div>
+
           <div className="flex justify-center py-2 md:justify-start">
-            <a href={link}>
-              <Button>Go to the website</Button>
-            </a>
+            <Button asChild>
+              <Link to={link}>{t("about-us.uni-button")}</Link>
+            </Button>
           </div>
         </div>
       </div>
