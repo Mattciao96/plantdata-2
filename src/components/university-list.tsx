@@ -80,9 +80,10 @@ function University({ title, link, logo, pointOfContact, email }) {
             className="h-[150px] w-[200px] object-contain"
           />
         </div>
-        <div className="flex flex-col gap-4 md:w-[60%] md:gap-2 md:px-4">
-          <h3 className="text-center text-2xl md:text-left">{title}</h3>
-          <p className="text-center md:text-left">
+        <div className="flex flex-col gap-4 md:w-[60%] md:px-4 md:gap-0">
+          <h3 className="text-center text-xl md:text-left md:mb-4">{title}</h3>
+          <p className="text-sm font-medium">Reference:</p>
+          <p className="text-center md:text-left text-[14px] md:pl-1 md:mb-4">
             {pointOfContact}
             <br />
             {email}
