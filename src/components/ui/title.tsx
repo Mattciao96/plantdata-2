@@ -5,7 +5,7 @@ export default function Title({ text }: { text: string }) {
 
   return (
     <div className="flex flex-col items-center justify-center h-48">
-      <h1 className="text-title font-medium">{t(text)}</h1>
+      <h1 className="text-subtitle font-medium">{t(text)}</h1>
     </div>
   );
 }

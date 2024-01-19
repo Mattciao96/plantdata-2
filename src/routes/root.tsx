@@ -13,7 +13,7 @@ export default function Root() {
       <ScrollToTop />
       <Navbar />
       
-      <main className="container min-h-[calc(100vh-3.4rem)]">
+      <main className="container-fluid min-h-[calc(100vh-3.4rem)]">
         <Outlet/>
       </main>
       <Footer />

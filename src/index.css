@@ -122,6 +122,11 @@
     line-height: 1;
     letter-spacing: -0.02em;
   }
+  .text-subtitle {
+    font-size: max(32px, min(10vw, 60px));
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
 
   .h-max-content {
     height: max-content;
