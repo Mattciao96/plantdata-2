@@ -31,12 +31,12 @@ export default function UniversityList() {
   return (
     <>
       <Title text={"about-us.title"}></Title>
-      <main className="flex w-full flex-col">
+      <div className="flex w-full flex-col items-center">
         <QueryClientProvider client={queryClient}>
           <UniversityListGet />
           <ReactQueryDevtools />
         </QueryClientProvider>
-      </main>
+      </div>
     </>
   );
 }

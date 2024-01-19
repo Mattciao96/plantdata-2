@@ -31,7 +31,7 @@ export default function ResourceList() {
   return (
     <>
       <Title text={"resources.title"}></Title>
-      <main className="flex w-full flex-col">
+      <div className="flex w-full flex-col">
         {resourcesData.map((resource) => (
           <Resource
             title={resource.title}
@@ -42,7 +42,7 @@ export default function ResourceList() {
             key={resource.title}
           />
         ))}
-      </main>
+      </div>
     </>
   );
 }
