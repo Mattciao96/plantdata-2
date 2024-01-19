@@ -53,9 +53,8 @@
       "button": "Go to github"
     }
   },
-
   "contacts": {
-    "title:": "Contacts",
+    "title": "Contacts",
     "description": "For information on Plant Data you can contact the coordinator, prof. Stefano Martellos (martelst@units.it) or the secretary, prof. Jury Nascimbene (juri.nascimbene@unibo.it).",
     "people": [
       {

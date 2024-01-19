@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import Spinner from "./ui/spinner";
 import { useTranslation } from "react-i18next";
 import Title from "./ui/title";
 import axios from "axios";
@@ -44,7 +45,9 @@ function UniversityListGet() {
   return (
     <div>
       {status === "pending" ? (
-        "Loading..."
+        <div className="flex justify-center">
+          <Spinner />
+        </div>
       ) : status === "error" ? (
         <span>Error: {error.message}</span>
       ) : (
@@ -68,13 +71,13 @@ function UniversityListGet() {
 function University({ title, link, logo, pointOfContact, email }) {
   //const { t } = useTranslation();
   return (
-    <div className="min-w-full flex justify-center">
+    <div className="flex min-w-full justify-center">
       <div className="mb-20 flex w-[900px] flex-col items-center justify-evenly gap-4 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-14 md:flex-row">
         <div className="relative flex items-center justify-evenly p-0 py-4 md:px-12">
           <img
             src={`images/loghi/${logo}`}
             alt={title}
-            className="h-[200px] w-[200px] object-contain"
+            className="h-[150px] w-[200px] object-contain"
           />
         </div>
         <div className="flex flex-col gap-4 md:w-[60%] md:gap-2 md:px-4">
