@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { useTranslation } from "react-i18next";
 export default function HeroSection() {
@@ -26,7 +27,9 @@ export default function HeroSection() {
           {t("hero.description")}
         </p>
         <div className="flex justify-center py-2 md:justify-start md:pl-1">
-          <Button>{t("hero.button")}</Button>
+          <Button>
+            <Link to="resources">{t("hero.button")}</Link>
+          </Button>
         </div>
       </div>
       {/* <div className="hidden md:mt-28 md:block w-full h-full max-h-[500px] max-w-[500px]">

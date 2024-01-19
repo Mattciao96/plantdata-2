@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { useTranslation } from "react-i18next";
 import Title from "./ui/title";
+import { Link } from "react-router-dom";
 
 // data from locales translation.json
 const resourcesData = [
@@ -60,11 +61,13 @@ function Resource({ title, description, image, link, button }) {
         />
       </div>
       <div className="flex flex-col gap-4 md:w-[60%] md:gap-2 md:px-4">
-        <h3 className="text-center text-4xl md:text-left">{t(title)}</h3>
-        <p>{t(description)}</p>
+        <h3 className="mb-4 text-center text-4xl md:text-left">{t(title)}</h3>
+        <p className="pl-[2px]">{t(description)}</p>
         <div className="flex justify-center py-2 md:justify-start">
           <a href={link}>
-            <Button>{t(button)}</Button>
+            <Button>
+              <Link to={link}>{t(button)}</Link>
+            </Button>
           </a>
         </div>
       </div>
