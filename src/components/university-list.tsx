@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const queryClient = new QueryClient();
 
 interface UniversityData {
-  
+
   id: number;
   university: string;
   website: string;
@@ -95,7 +95,7 @@ function University({ title, link, logo, pointOfContact, email }: UniversityData
           {title}
         </h3>
         <div className="w-[146px]">
-          <p className="text-center md:text-left text-sm font-medium"></p>
+          <p className="text-center md:text-left text-sm font-medium">{t("about-us.uni-contacts")}</p>
           <p className="text-center md:text-left md:pl-1 text-[14px] md:mb-4 ">
             {pointOfContact}
             <br />
