@@ -5,7 +5,6 @@ import Title from "./ui/title";
 import axios from "axios";
 import {
   useQuery,
-  useQueryClient,
   QueryClient,
   QueryClientProvider,
 } from "@tanstack/react-query";
@@ -14,9 +13,19 @@ import { Link } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
+interface UniversityData {
+  
+  id: number;
+  university: string;
+  website: string;
+  logo: string;
+  point_of_contact: string;
+  email: string;
+}
+
 // call the api (https://dryades.units.it/plantdata/university) usin axios and react-query v5 to get the list of universities
 function useUniversity() {
-  return useQuery({
+  return useQuery<UniversityData[]>({
     queryKey: ["university"],
     queryFn: async () => {
       const { data } = await axios.get(
@@ -40,6 +49,7 @@ export default function UniversityList() {
     </>
   );
 }
+
 
 function UniversityListGet() {
   const { status, data, error } = useUniversity();
@@ -69,7 +79,7 @@ function UniversityListGet() {
   );
 }
 
-function University({ title, link, logo, pointOfContact, email }) {
+function University({ title, link, logo, pointOfContact, email }: UniversityData) {
   const { t } = useTranslation();
   return (
     <li className="mb-20 flex w-full max-w-[400px] flex-col items-center justify-evenly gap-1 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-8 md:max-w-[900px] md:flex-row md:gap-4 md:last:mb-16">
@@ -85,8 +95,8 @@ function University({ title, link, logo, pointOfContact, email }) {
           {title}
         </h3>
         <div className="w-[146px]">
-          <p className="text-sm font-medium">Reference:</p>
-          <p className="pl-1 text-[14px] md:mb-4 ">
+          <p className="text-center md:text-left text-sm font-medium"></p>
+          <p className="text-center md:text-left md:pl-1 text-[14px] md:mb-4 ">
             {pointOfContact}
             <br />
             {email}
