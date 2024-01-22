@@ -31,12 +31,12 @@ export default function UniversityList() {
   return (
     <>
       <Title text={"about-us.title"}></Title>
-      <div className="flex w-full flex-col items-center">
+      <ul className="flex w-full flex-col items-center mb-8">
         <QueryClientProvider client={queryClient}>
           <UniversityListGet />
           <ReactQueryDevtools />
         </QueryClientProvider>
-      </div>
+      </ul>
     </>
   );
 }
@@ -72,7 +72,7 @@ function UniversityListGet() {
 function University({ title, link, logo, pointOfContact, email }) {
   const { t } = useTranslation();
   return (
-    <div className="mb-20 flex w-full max-w-[400px] flex-col items-center justify-evenly gap-1 rounded-xl border border-input bg-pure p-6 first:mt-0 last:mb-16 md:my-8 md:max-w-[900px] md:flex-row md:gap-4">
+    <li className="mb-20 flex w-full max-w-[400px] flex-col items-center justify-evenly gap-1 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-8 md:max-w-[900px] md:flex-row md:gap-4 md:last:mb-16">
       <div className="relative flex items-center justify-evenly p-0 py-4 md:px-12">
         <img
           src={`images/loghi/${logo}`}
@@ -99,6 +99,6 @@ function University({ title, link, logo, pointOfContact, email }) {
           </Button>
         </div>
       </div>
-    </div>
+    </li>
   );
 }

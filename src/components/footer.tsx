@@ -24,7 +24,7 @@ const universityLoghi: UniversityLogoProps[] = [
     title: "University of Trieste",
     image: "./images/loghi/units.png",
     url: "https://www.units.it",
-    className: "filter brightness-0 dark:invert",
+    className: "dark:filter dark:brightness-0 dark:invert",
   },
   {
     title: "Lifewatch Italia",

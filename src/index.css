@@ -45,10 +45,11 @@
   .dark {
     /* --background: 222.2 84% 4.9%; */
     /* --background: 195, 84%, 10%; */
-    --background: 229, 84%, 5%;
+    --background: 224, 71%, 4%;
     --foreground: 210 40% 98%;
 
-    --background-pure: 204, 48%, 20%;
+    /* --background-pure: 204, 48%, 20%; */
+    --background-pure: 215, 28%, 17%;
 
     --background-dark: 217, 34%, 10%;
 
@@ -67,7 +68,8 @@
     --secondary-foreground: 210 40% 98%;
 
     /* --muted: 217.2 32.6% 17.5%; */
-    --muted: 195, 84%, 9%;
+    /* --muted: 195, 84%, 9%; */
+    --muted:215, 28%, 17%;
 
     --muted-foreground: 215 20.2% 65.1%;
 
@@ -94,7 +96,7 @@
 }
 
 .ta {
-  color: hsl(229, 84%, 5%);
+  color: hsl(215, 28%, 17%)
 }
 
 @layer base {

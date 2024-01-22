@@ -27,17 +27,18 @@ export default function CircleLogo() {
       <div className="perimeter-logo logo-pos-2 bg-pure rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
         <img
           className="dark:filter dark:brightness-0 dark:invert"
-          src="./images/loghi/lw-ita.png"
+          src="./images/loghi/unibo-small.png"
           alt=""
         />
       </div>
       <div className="perimeter-logo logo-pos-3 bg-pure rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
         <img
           className="dark:filter dark:brightness-0 dark:invert"
-          src="./images/loghi/unibo-small.png"
+          src="./images/loghi/lw-ita.png"
           alt=""
         />
       </div>
+      
       <div className="perimeter-logo logo-pos-4 bg-pure rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
         <img
           className="dark:filter dark:brightness-0 dark:invert"
