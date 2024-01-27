@@ -3,59 +3,59 @@ import { Leaf } from "lucide-react";
 export default function CircleLogo() {
   return (
     <div className="circle-perimeter">
-      <div className="pulse animate-ping"></div>
-      <div className="logo-center pulsating-circle flex items-center justify-center bg-pure dark:bg-secondary rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1 ">
-        <Leaf className=" w-8 h-8 text dark:filter dark:brightness-0 dark:invert" />
+      <div className="pulse animate-ping" />
+      <div className="logo-center pulsating-circle flex h-[60px] w-[60px] items-center justify-center rounded-full bg-pure p-1 shadow-lg dark:bg-secondary dark:shadow-muted md:h-[80px] md:w-[80px] ">
+        <Leaf className=" text h-8 w-8 dark:brightness-0 dark:invert dark:filter" />
       </div>
       {/* <div className="logo-center flex items-center bg-pure rounded-full w-[70px] h-[70px] shadow-lg p-1 ">
         <img className="dark:filter dark:brightness-0 dark:invert" src="./images/loghi/lw-ita.png" alt="" />
       </div> */}
-      <div className="perimeter-logo logo-pos-0 bg-pure dark:bg-secondary rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
+      <div className="perimeter-logo logo-pos-0 h-[60px] w-[60px] rounded-full bg-pure p-1 shadow-lg dark:bg-secondary dark:shadow-muted md:h-[80px] md:w-[80px]">
         <img
-          className="dark:filter dark:brightness-0 dark:invert"
+          className="dark:brightness-0 dark:invert dark:filter"
           src="./images/loghi/sapienza.png"
           alt=""
         />
       </div>
-      <div className="perimeter-logo logo-pos-1 bg-pure dark:bg-secondary rounded-full  w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
+      <div className="perimeter-logo logo-pos-1 h-[60px] w-[60px] rounded-full  bg-pure p-1 shadow-lg dark:bg-secondary dark:shadow-muted md:h-[80px] md:w-[80px]">
         <img
-          className="filter brightness-0 dark:invert"
+          className="brightness-0 filter dark:invert"
           src="./images/loghi/units-small.png"
           alt=""
         />
       </div>
-      <div className="perimeter-logo logo-pos-2 bg-pure dark:bg-secondary rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
+      <div className="perimeter-logo logo-pos-2 h-[60px] w-[60px] rounded-full bg-pure p-1 shadow-lg dark:bg-secondary dark:shadow-muted md:h-[80px] md:w-[80px]">
         <img
-          className="dark:filter dark:brightness-0 dark:invert"
+          className="dark:brightness-0 dark:invert dark:filter"
           src="./images/loghi/unibo-small.png"
           alt=""
         />
       </div>
-      <div className="perimeter-logo logo-pos-3 bg-pure dark:bg-secondary rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
+      <div className="perimeter-logo logo-pos-3 h-[60px] w-[60px] rounded-full bg-pure p-1 shadow-lg dark:bg-secondary dark:shadow-muted md:h-[80px] md:w-[80px]">
         <img
-          className="dark:filter dark:brightness-0 dark:invert"
+          className="dark:brightness-0 dark:invert dark:filter"
           src="./images/loghi/lw-ita.png"
           alt=""
         />
       </div>
-      
-      <div className="perimeter-logo logo-pos-4 bg-pure dark:bg-secondary rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
+
+      <div className="perimeter-logo logo-pos-4 h-[60px] w-[60px] rounded-full bg-pure p-1 shadow-lg dark:bg-secondary dark:shadow-muted md:h-[80px] md:w-[80px]">
         <img
-          className="dark:filter dark:brightness-0 dark:invert"
+          className="dark:brightness-0 dark:invert dark:filter"
           src="./images/loghi/pisa.png"
           alt=""
         />
       </div>
-      <div className="perimeter-logo logo-pos-5 bg-pure dark:bg-secondary rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
+      <div className="perimeter-logo logo-pos-5 h-[60px] w-[60px] rounded-full bg-pure p-1 shadow-lg dark:bg-secondary dark:shadow-muted md:h-[80px] md:w-[80px]">
         <img
-          className="dark:filter dark:brightness-0 dark:invert"
+          className="dark:brightness-0 dark:invert dark:filter"
           src="./images/loghi/perugia.png"
           alt=""
         />
       </div>
-      <div className="perimeter-logo logo-pos-6 bg-pure dark:bg-secondary rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] shadow-lg dark:shadow-muted p-1">
+      <div className="perimeter-logo logo-pos-6 h-[60px] w-[60px] rounded-full bg-pure p-1 shadow-lg dark:bg-secondary dark:shadow-muted md:h-[80px] md:w-[80px]">
         <img
-          className="dark:filter dark:brightness-0 dark:invert max-w-[90%] mt-2"
+          className="mt-2 max-w-[90%] dark:brightness-0 dark:invert dark:filter"
           src="./images/loghi/camerino2.png"
           alt=""
         />
