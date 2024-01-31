@@ -63,7 +63,7 @@ const universityLoghi: UniversityLogoProps[] = [
     title: "University of Pisa",
     image: "./images/loghi/pisa-full.png",
     url: "https://www.unipi.it/",
-    className: "max-h-[90px] md:max-h-[100px]",
+    className: "max-h-[90px] md:max-h-[100px] dark:filter dark:brightness-0 dark:invert",
   },
 ];
 

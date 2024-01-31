@@ -219,6 +219,42 @@
     offset-distance: 105%;
   }
 
+  @media (max-width: 450px) {
+    .circle-perimeter {
+      width: 240px;
+      height: 240px;
+    }
+    .perimeter-logo {
+      /* offset-path: circle(170px at center); */
+      offset-path: path(
+        "M 120, 240 a 120, 120 0 1, 1 240, 0 a 120, 120 0 1, 1 -240, 0"
+      );
+      top: -120px;
+      left: -120px;
+    }
+    .logo-pos-0 {
+      offset-distance: 95%;
+    }
+    .logo-pos-1 {
+      offset-distance: 5%;
+    }
+    .logo-pos-2 {
+      offset-distance: 15%;
+    }
+    .logo-pos-3 {
+      offset-distance: 25%;
+    }
+    .logo-pos-4 {
+      offset-distance: 35%;
+    }
+    .logo-pos-5 {
+      offset-distance: 45%;
+    }
+    .logo-pos-6 {
+      offset-distance: 55%;
+    }
+  }
+
   @media (min-width: 768px) {
     .circle-perimeter {
       width: 340px;
