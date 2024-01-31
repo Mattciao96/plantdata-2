@@ -17,7 +17,7 @@ export default function DiscoverSection() {
   return (
     <>
       {/* SECTION 1 */}
-      <div className="my-32 flex min-w-full flex-col items-center justify-evenly gap-4 md:mt-56 md:flex-row">
+      <div className="mt-24 mb-32 flex min-w-full flex-col items-center justify-evenly gap-4 md:mt-56 md:flex-row">
         <div className=" relative flex items-center justify-center p-12 ">
           <CircleLogo />
         </div>
