@@ -24,7 +24,8 @@ const universityLoghi: UniversityLogoProps[] = [
     title: "University of Trieste",
     image: "./images/loghi/units.png",
     url: "https://www.units.it",
-    className: "max-h-[70px] md:max-h-[90px] dark:filter dark:brightness-0 dark:invert",
+    className:
+      "max-h-[70px] md:max-h-[90px] dark:filter dark:brightness-0 dark:invert",
   },
   /*   {
     title: "Lifewatch Italia",
@@ -44,27 +45,27 @@ const universityLoghi: UniversityLogoProps[] = [
     title: "University of Camerino",
     image: "./images/loghi/cam-full-2.png",
     url: "https://www.unicam.it/",
-    className: "max-h-[70px] md:max-h-[90px]",
+    className: "max-h-[70px] md:max-h-[80px]",
   },
   {
     title: "University of Perugia",
     image: "./images/loghi/perugia-full.svg",
     url: "https://www.unipg.it/",
-    className: "max-h-[70px] md:max-h-[90px]",
+    className: "max-h-[70px] md:max-h-[80px]",
   },
   {
     title: "University of Bologna",
     image: "./images/loghi/unibo.png",
     url: "https://www.unibo.it",
     className:
-      "max-h-[70px] md:max-h-[90px] dark:filter dark:brightness-0 dark:invert",
+      "max-h-[80px] md:max-h-[80px] dark:filter dark:brightness-0 dark:invert",
   },
   {
     title: "University of Pisa",
     image: "./images/loghi/pisa-full.png",
     url: "https://www.unipi.it/",
     className:
-      "max-h-[70px] md:max-h-[90px] dark:filter dark:brightness-0 dark:invert",
+      "max-h-[80px] md:max-h-[80px] dark:filter dark:brightness-0 dark:invert",
   },
 ];
 
@@ -142,7 +143,7 @@ function SocialLogo({ data }: { data: SocialLogoProps }) {
 function MainLoghiAndContacts() {
   return (
     <div className="flex justify-center">
-      <div className="grid lg:gap-x-8 max-w-[556px] grid-cols-2 grid-rows-3 gap-y-8 sm:grid-rows-2 md:my-12 md:max-w-full md:grid-cols-4 md:grid-rows-1 md:[&>*:nth-child(3)]:col-start-2 md:[&>*:nth-child(3)]:row-start-1 md:[&>*:nth-child(4)]:col-start-3 md:[&>*:nth-child(4)]:row-start-1">
+      <div className="grid max-w-[556px] grid-cols-2 grid-rows-3 gap-y-8 sm:grid-rows-2 md:my-12 md:max-w-full md:grid-cols-4 md:grid-rows-1 lg:gap-x-8 md:[&>*:nth-child(3)]:col-start-2 md:[&>*:nth-child(3)]:row-start-1 md:[&>*:nth-child(4)]:col-start-3 md:[&>*:nth-child(4)]:row-start-1">
         <MainLoghi />
         {contacts.map((data, index) => (
           <Contact key={index} data={data} />
@@ -182,9 +183,13 @@ function Contact({ data }: { data: ContactProps }) {
   return (
     <div className="col-span-2 flex w-auto max-w-[220px] items-start justify-center justify-self-center rounded-md border border-muted last:-mt-6 sm:col-span-1  sm:last:mt-0">
       <div className="flex w-44 flex-col gap-2 pl-2 md:pl-4">
-        <h2 className="text-2xl">{t(role)}</h2>
-        <p className="pl-[2px] text-sm text-secondary-foreground">{t(name)}</p>
-        <p className="pl-[3px] text-sm text-secondary-foreground">{t(email)}</p>
+        <h2 className="text-center sm:text-left text-2xl">{t(role)}</h2>
+        <p className="text-center text-sm text-secondary-foreground sm:pl-[2px] sm:text-left">
+          {t(name)}
+        </p>
+        <p className="text-center text-sm text-secondary-foreground sm:pl-[3px] sm:text-left">
+          {t(email)}
+        </p>
       </div>
     </div>
   );
