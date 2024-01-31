@@ -3,7 +3,7 @@ import "@/index.css";
 import ReactDOM from "react-dom/client";
 import { Suspense } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "@/routes/root";
 import Home from "@/routes/home";
 import WhoAreWe from "@/routes/who-are-we";
@@ -12,7 +12,7 @@ import Contacts from "@/routes/contacts";
 import ErrorPage from "@/error-page";
 import Spinner from "./components/ui/spinner";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
@@ -52,7 +52,7 @@ const router = createHashRouter([
     element: <Contacts />,
     errorElement: <ErrorPage />,
   } */
-]);
+], { basename: "/plantdata/" });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
