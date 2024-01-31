@@ -4,8 +4,8 @@ export default function Resources() {
   return (
     <>
       <Helmet>
-        <title>Resources</title>
-        <meta name="description" content="Resources" />
+        <title>PlantData Resources</title>
+        <meta name="description" content="Plant Data contributes to the development of several resources, from databases to tools for research data retrieval. These resources are and will be always available online to everybody." />
         <link rel="icon" href="" />
       </Helmet>
       <ResourceList />
