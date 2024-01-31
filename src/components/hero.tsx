@@ -6,7 +6,7 @@ export default function HeroSection() {
 
   return (
     <div className="flex flex-col justify-evenly md:flex-row">
-      <div className=" mt-10 text-justify md:mt-20 md:text-left">
+      <div className=" mt-20 text-justify md:mt-20 md:text-left">
         {i18n.resolvedLanguage === "en" && (
           <h1 className="text-title -mx-4 text-center  font-medium text-[#3ecf8e] md:mx-0 md:text-left">
             {t("hero.title")}
