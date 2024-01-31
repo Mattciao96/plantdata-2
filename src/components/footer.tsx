@@ -24,7 +24,7 @@ const universityLoghi: UniversityLogoProps[] = [
     title: "University of Trieste",
     image: "./images/loghi/units.png",
     url: "https://www.units.it",
-    className: "dark:filter dark:brightness-0 dark:invert",
+    className: "max-h-[70px] md:max-h-[90px] dark:filter dark:brightness-0 dark:invert",
   },
   /*   {
     title: "Lifewatch Italia",
@@ -37,7 +37,7 @@ const universityLoghi: UniversityLogoProps[] = [
     title: "University of Roma",
     image: "./images/loghi/sap-full.png",
     url: "https://www.uniroma1.it/it/pagina-strutturale/home",
-    className: "",
+    className: "max-h-[70px] md:max-h-[90px] ",
   },
 
   {
@@ -57,14 +57,14 @@ const universityLoghi: UniversityLogoProps[] = [
     image: "./images/loghi/unibo.png",
     url: "https://www.unibo.it",
     className:
-      "max-h-[90px] md:max-h-[100px] dark:filter dark:brightness-0 dark:invert",
+      "max-h-[70px] md:max-h-[90px] dark:filter dark:brightness-0 dark:invert",
   },
   {
     title: "University of Pisa",
     image: "./images/loghi/pisa-full.png",
     url: "https://www.unipi.it/",
     className:
-      "max-h-[90px] md:max-h-[100px] dark:filter dark:brightness-0 dark:invert",
+      "max-h-[70px] md:max-h-[90px] dark:filter dark:brightness-0 dark:invert",
   },
 ];
 
