@@ -30,7 +30,7 @@ export default function LanguageSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="min-w-[5rem] dark:border dark:border-input"
+        className="min-w-[5rem] dark:border dark:border-input dark:bg-background"
         align="end"
       >
         {Object.keys(lngs).map((lng) => (

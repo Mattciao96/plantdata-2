@@ -31,7 +31,7 @@ const resourcesData = [
 export default function ResourceList() {
   return (
     <>
-      <Title text={"resources.title"}></Title>
+      <Title text={"resources.title"}/>
       <div className="flex w-full flex-col items-center">
         {resourcesData.map((resource) => (
           <Resource
@@ -57,7 +57,7 @@ function Resource({ title, description, image, link, button }) {
         <img
           src={image}
           alt={t(title)}
-          className="h-[300px] w-[300px] object-contain"
+          className="h-[200px] w-[200px] object-contain"
         />
       </div>
       <div className="flex flex-col gap-4 md:w-[60%] md:gap-2 md:px-4">

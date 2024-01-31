@@ -29,7 +29,7 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="min-w-[6rem] dark:border dark:border-input"
+        className="min-w-[6rem] dark:border dark:border-input dark:bg-background"
         align="end"
       >
         <DropdownMenuItem
