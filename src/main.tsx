@@ -1,10 +1,9 @@
 import "@/i18n";
 import "@/index.css";
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { Suspense } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Root from "@/routes/root";
 import Home from "@/routes/home";
 import WhoAreWe from "@/routes/who-are-we";
@@ -13,7 +12,7 @@ import Contacts from "@/routes/contacts";
 import ErrorPage from "@/error-page";
 import Spinner from "./components/ui/spinner";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
