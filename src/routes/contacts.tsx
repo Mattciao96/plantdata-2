@@ -29,7 +29,7 @@ export default function Contacts() {
       </Helmet>
 
       <Title text={"contacts.title"} />
-      <ul className="flex flex-col items-center gap-4">
+      {/* <ul className="flex flex-col items-center gap-4">
         {contacts.map((contact) => (
           <li className="max-w-[300px]">
             <h3 className="=text-center text-4xl md:mb-2 md:max-w-full ">
@@ -44,7 +44,8 @@ export default function Contacts() {
             </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
+      <div className="flex justify-center">Coming soon</div>
     </>
   );
 }
