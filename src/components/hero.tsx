@@ -35,7 +35,7 @@ export default function HeroSection() {
       {/* <div className="hidden md:mt-28 md:block w-full h-full max-h-[500px] max-w-[500px]">
         <img className="m-h-[inherit]" src="./images/other/leaves3.png" alt="" />
       </div> */}
-      <div className="hidden h-full max-h-[500px] w-full max-w-[500px] md:mt-2 md:block">
+      <div className="hidden h-full max-h-[500px] w-full max-w-[500px] md:mt-2 lg:block">
         <img
           className="m-h-[inherit]"
           src="./images/other/planthero.png"
