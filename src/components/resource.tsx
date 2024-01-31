@@ -16,7 +16,7 @@ const resourcesData = [
     title: "resources.wikiplantbase.title",
     image: "images/sites/wpb.jpg",
     description: "resources.wikiplantbase.description",
-    link: "https://wikiplantbase.org/",
+    link: "https://bot.biologia.unipi.it/wpb/italia",
     button: "resources.wikiplantbase.button",
   },
   {

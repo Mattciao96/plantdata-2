@@ -26,12 +26,12 @@ const universityLoghi: UniversityLogoProps[] = [
     url: "https://www.units.it",
     className: "dark:filter dark:brightness-0 dark:invert",
   },
-  {
+/*   {
     title: "Lifewatch Italia",
     image: "./images/loghi/lw-ita.png",
     url: "https://www.lifewatchitaly.eu",
     className: "dark:filter dark:brightness-0 dark:invert",
-  },
+  }, */
 
   {
     title: "University of Roma",
