@@ -1,23 +1,17 @@
-// a component that uses tailwind with a structure of a grid of 6 columns and 3 rows
-
-import { Button } from "./ui/button";
-import { Globe } from "lucide-react";
-import CircleLogo from "./ui/circle";
+import { Button } from "@/components/ui/button";
+import CircleLogo from "@/components/ui/circle";
+import ImageScrollFixed from "@/components/ui/image-slide-fixed";
 import { useTranslation } from "react-i18next";
-import ImageScrollFixed from "./ui/image-slide-fixed";
+import { Globe } from "lucide-react";
 import { Link } from "react-router-dom";
-
-// import * as React from "react";
-
-// import { cn } from "@/lib/utils";
 
 export default function DiscoverSection() {
   const { t } = useTranslation();
 
   return (
-    <>
+    <ul>
       {/* SECTION 1 */}
-      <div className="mt-24 mb-32 flex min-w-full flex-col items-center justify-evenly gap-4 md:mt-56 md:flex-row">
+      <li className="mt-24 mb-32 flex min-w-full flex-col items-center justify-evenly gap-4 md:mt-56 md:flex-row">
         <div className=" relative flex items-center justify-center p-12 ">
           <CircleLogo />
         </div>
@@ -34,9 +28,9 @@ export default function DiscoverSection() {
             </Button>
           </div>
         </div>
-      </div>
+      </li>
       {/* SECTION 2 */}
-      <div className="my-32 flex min-w-full flex-col-reverse items-center justify-evenly gap-4 md:flex-row">
+      <li className="my-32 flex min-w-full flex-col-reverse items-center justify-evenly gap-4 md:flex-row">
         <div className="-mt-[100px] flex max-w-[500px] flex-col gap-4 md:mt-0 md:gap-2">
           <h3 className="text-center text-4xl md:text-left">
             {" "}
@@ -54,9 +48,9 @@ export default function DiscoverSection() {
         <div className=" relative flex items-center justify-center gap-8 ">
           <ImageScrollFixed />
         </div>
-      </div>
+      </li>
       {/* SECTION 3 */}
-      <div className="mb-40 flex min-w-full flex-col items-center justify-evenly gap-4 md:my-60 md:flex-row">
+      <li className="mb-40 flex min-w-full flex-col items-center justify-evenly gap-4 md:my-60 md:flex-row">
         <div className="relative flex items-center justify-center p-0 md:p-12 ">
           <Globe className="h-[100px] w-[100px] text-[#3ecf8e] dark:text-[#3ecf8e]" />
         </div>
@@ -71,7 +65,7 @@ export default function DiscoverSection() {
             <Button>{t("contacts.button")}</Button>
           </div> */}
         </div>
-      </div>
-    </>
+      </li>
+    </ul>
   );
 }
