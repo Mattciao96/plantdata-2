@@ -51,7 +51,7 @@ export default function UniversityList() {
 
 
 function UniversityListGet() {
-  const { status, data, error } = useUniversity();
+  const { status, data} = useUniversity();
   return (
     <>
       {status === "pending" ? (
