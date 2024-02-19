@@ -1,7 +1,7 @@
-import { Button } from "./ui/button";
-import Spinner from "./ui/spinner";
+import { Button } from "@/components/ui/button";
+import Spinner from "@/components/ui/spinner";
+import Title from "@/components/ui/title";
 import { useTranslation } from "react-i18next";
-import Title from "./ui/title";
 import axios from "axios";
 import {
   useQuery,
@@ -14,7 +14,6 @@ import { Link } from "react-router-dom";
 const queryClient = new QueryClient();
 
 interface UniversityData {
-
   id: number;
   university: string;
   website: string;
@@ -39,7 +38,7 @@ function useUniversity() {
 export default function UniversityList() {
   return (
     <>
-      <Title text={"about-us.title"}></Title>
+      <Title text={"about-us.title"}/>
       <ul className="flex w-full flex-col items-center mb-8">
         <QueryClientProvider client={queryClient}>
           <UniversityListGet />
@@ -60,16 +59,12 @@ function UniversityListGet() {
           <Spinner />
         </div>
       ) : status === "error" ? (
-        <span>Error: {error.message}</span>
+        <span>Error retriving the list of universities</span>
       ) : (
         <>
           {data.map((university) => (
             <University
-              title={university.university}
-              link={university.website}
-              logo={university.logo}
-              pointOfContact={university.point_of_contact}
-              email={university.email}
+              {...university}
               key={university.id}
             />
           ))}
@@ -79,25 +74,25 @@ function UniversityListGet() {
   );
 }
 
-function University({ title, link, logo, pointOfContact, email }: UniversityData) {
+function University({ university, website, logo, point_of_contact, email }: UniversityData) {
   const { t } = useTranslation();
   return (
     <li className="mb-20 flex w-full max-w-[400px] flex-col items-center justify-evenly gap-1 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-8 md:max-w-[900px] md:flex-row md:gap-4 md:last:mb-16">
       <div className="relative flex items-center justify-evenly p-0 py-4 md:px-12">
         <img
           src={`images/loghi/${logo}`}
-          alt={title}
+          alt={university}
           className="h-[150px] w-[200px] object-contain"
         />
       </div>
       <div className="flex flex-col items-center gap-4 md:w-[60%] md:items-start md:gap-0 md:px-4">
         <h3 className="max-w-[250px] text-center text-xl md:mb-4 md:max-w-full md:text-left">
-          {title}
+          {university}
         </h3>
         <div className="w-[146px]">
           <p className="text-center md:text-left text-sm font-medium">{t("about-us.uni-contacts")}</p>
           <p className="text-center md:text-left md:pl-1 text-[14px] md:mb-4 ">
-            {pointOfContact}
+            {point_of_contact}
             <br />
             {email}
           </p>
@@ -105,7 +100,7 @@ function University({ title, link, logo, pointOfContact, email }: UniversityData
 
         <div className="flex justify-center py-2 md:justify-start">
           <Button asChild>
-            <Link to={link}>{t("about-us.uni-button")}</Link>
+            <Link to={website}>{t("about-us.uni-button")}</Link>
           </Button>
         </div>
       </div>
