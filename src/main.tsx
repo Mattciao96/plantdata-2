@@ -41,17 +41,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-
-  /* {
-    path: "resources",
-    element: <Resources />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "contacts",
-    element: <Contacts />,
-    errorElement: <ErrorPage />,
-  } */
 ], { basename: "/plantdata/" });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
