@@ -89,7 +89,7 @@ export default function ImageScrollFixed() {
         />
         <img
           className="mx-1 h-[120px] max-h-[120px] min-h-[120px] w-auto max-w-none rounded"
-          src="./images/other/planthero.png"
+          src="./images/other/xantho.jpg"
           alt=""
         />
         <img
@@ -111,7 +111,7 @@ export default function ImageScrollFixed() {
         />
         <img
           className="mx-1 h-[120px] max-h-[120px] min-h-[120px] w-auto max-w-none rounded"
-          src="./images/other/planthero.png"
+          src="./images/other/xantho.jpg"
           alt=""
         />
         <img
