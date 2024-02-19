@@ -1,6 +1,6 @@
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import Title from "./ui/title";
+import Title from "@/components/ui/title";
 import { Link } from "react-router-dom";
 
 interface ResourceData {
