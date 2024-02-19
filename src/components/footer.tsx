@@ -51,14 +51,14 @@ const universityLoghi: UniversityLogoProps[] = [
     title: "University of Perugia",
     image: "./images/loghi/perugia-full.svg",
     url: "https://www.unipg.it/",
-    className: "max-h-[70px] md:max-h-[80px]",
+    className: "max-h-[62px] md:max-h-[75px]",
   },
   {
     title: "University of Bologna",
     image: "./images/loghi/unibo.png",
     url: "https://www.unibo.it",
     className:
-      "max-h-[80px] md:max-h-[80px] dark:filter dark:brightness-0 dark:invert",
+      "max-h-[80px] md:max-h-[84px] dark:filter dark:brightness-0 dark:invert",
   },
   {
     title: "University of Pisa",
@@ -95,20 +95,19 @@ export default function Footer() {
   return (
     <footer className="border-t border-input bg-muted py-6">
       <div className="container">
-        {/* rest */}
         <div className="flex flex-col gap-8 lg:gap-4">
           {/* da buttare dentro un div per con margini ai lati per rendere fisso il numero di loghi */}
-          <div className="flex flex-row flex-wrap justify-center gap-x-2 gap-y-4 md:gap-4">
+          <ul className="flex flex-row flex-wrap justify-center gap-x-2 gap-y-4 md:gap-4">
             {universityLoghi.map((data, index) => (
-              <UniversityLogo key={index} data={data} />
+              <UniversityLogo key={index} {...data} />
             ))}
-          </div>
+          </ul>
           <MainLoghiAndContacts />
         </div>
 
         <div className="flex justify-center gap-8 border-t border-input pt-6">
           {socialLoghi.map((data, index) => (
-            <SocialLogo key={index} data={data} />
+            <SocialLogo key={index} {...data} />
           ))}
         </div>
       </div>
@@ -116,20 +115,19 @@ export default function Footer() {
   );
 }
 
-function UniversityLogo({ data }: { data: UniversityLogoProps }) {
-  const { title, image, url, className } = data;
+function UniversityLogo({ title, image, url, className }:UniversityLogoProps) {
+  
   return (
-    <div className="relative flex h-auto w-[48%] max-w-[220px] items-center justify-center rounded-md border border-muted p-2 md:max-h-24 md:min-h-[120px] md:w-52">
+    <li className="relative flex h-auto w-[48%] max-w-[220px] items-center justify-center rounded-md border border-muted p-2 md:max-h-24 md:min-h-[120px] md:w-52">
       <a href={url} className="absolute inset-0 z-10" aria-label={title}>
         <span className="sr-only">{title}</span>
       </a>
       <img src={image} className={cn("", className)} alt={title} />
-    </div>
+    </li>
   );
 }
 
-function SocialLogo({ data }: { data: SocialLogoProps }) {
-  const { title, image, url, className } = data;
+function SocialLogo({ title, image, url, className }:SocialLogoProps ) {
   return (
     <div className="relative flex h-12 w-12 items-center justify-center rounded-md border border-muted p-2">
       <a href={url} className="absolute inset-0 z-10" aria-label={title}>
@@ -183,7 +181,7 @@ function Contact({ data }: { data: ContactProps }) {
   return (
     <div className="col-span-2 flex w-auto max-w-[220px] items-start justify-center justify-self-center rounded-md border border-muted last:-mt-6 sm:col-span-1  sm:last:mt-0">
       <div className="flex w-44 flex-col gap-2 pl-2 md:pl-4">
-        <h2 className="text-center sm:text-left text-2xl">{t(role)}</h2>
+        <h2 className="text-center text-2xl sm:text-left">{t(role)}</h2>
         <p className="text-center text-sm text-secondary-foreground sm:pl-[2px] sm:text-left">
           {t(name)}
         </p>
