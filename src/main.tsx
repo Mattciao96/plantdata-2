@@ -10,7 +10,7 @@ import WhoAreWe from "@/routes/who-are-we";
 import Resources from "@/routes/resources";
 import Contacts from "@/routes/contacts";
 import ErrorPage from "@/error-page";
-import Spinner from "./components/ui/spinner";
+import Spinner from "@/components/ui/spinner";
 
 const router = createBrowserRouter([
   {
