@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 export default function HeroSection() {
   const { t, i18n } = useTranslation();
@@ -7,7 +7,6 @@ export default function HeroSection() {
   return (
     <div className="flex flex-col justify-evenly md:flex-row">
       <div className=" mt-24 text-justify md:mt-20 md:text-left">
-     
           {i18n.resolvedLanguage === "en" && (
             <h1 className="text-title -mx-4 text-center  font-medium text-[#3ecf8e] md:mx-0 md:text-left">
               {t("hero.title")}
@@ -34,9 +33,6 @@ export default function HeroSection() {
           </Button>
         </div>
       </div>
-      {/* <div className="hidden md:mt-28 md:block w-full h-full max-h-[500px] max-w-[500px]">
-        <img className="m-h-[inherit]" src="./images/other/leaves3.png" alt="" />
-      </div> */}
       <div className="hidden h-full max-h-[500px] w-full max-w-[500px] md:mt-2 lg:block">
         <img
           className="m-h-[inherit]"
