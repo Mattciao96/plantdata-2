@@ -62,16 +62,14 @@ export default function Navbar() {
         <NavigationMenuList className="hidden p-3 md:flex">
           {components.map((component, index) => (
             <NavigationMenuItem key={index}>
-              <Link to={component.href}>
-                <NavigationMenuLink
+                <NavigationMenuLink asChild
                   className={cn(
                     navigationMenuTriggerStyle(),
                     "bg-transparent hover:bg-secondary/90 hover:backdrop-blur hover:supports-[backdrop-filter]:bg-secondary/60",
                   )}
                 >
-                  {t(component.text)}
+                  <Link to={component.href}>{t(component.text)}  </Link>
                 </NavigationMenuLink>
-              </Link>
             </NavigationMenuItem>
           ))}
           {/* options */}
