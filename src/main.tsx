@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-], { basename: "/plantdata/" });
+], { basename: "/" });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
