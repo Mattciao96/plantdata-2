@@ -16,9 +16,9 @@ export default function DiscoverSection() {
           <CircleLogo />
         </div>
         <div className="-mt-[100px] flex max-w-[500px] flex-col gap-4 md:mt-0 md:gap-2">
-          <h3 className="text-center text-4xl md:text-left">
+          <h2 className="text-center text-4xl md:text-left">
             {t("about-us.title")}
-          </h3>
+          </h2>
           <p className="text-balance text-center md:text-left">
             {t("about-us.description")}
           </p>
@@ -32,10 +32,10 @@ export default function DiscoverSection() {
       {/* SECTION 2 */}
       <li className="my-32 flex min-w-full flex-col-reverse items-center justify-evenly gap-4 md:flex-row">
         <div className="-mt-[100px] flex max-w-[500px] flex-col gap-4 md:mt-0 md:gap-2">
-          <h3 className="text-center text-4xl md:text-left">
+          <h2 className="text-center text-4xl md:text-left">
             {" "}
             {t("resources.title")}
-          </h3>
+          </h2>
           <p className="text-balance text-center md:text-left">
             {t("resources.description")}
           </p>
@@ -55,9 +55,9 @@ export default function DiscoverSection() {
           <Globe className="h-[100px] w-[100px] text-[#3ecf8e] dark:text-[#3ecf8e]" />
         </div>
         <div className="flex max-w-[500px] flex-col gap-4 md:gap-2 ">
-          <h3 className="text-center text-4xl md:text-left">
+          <h2 className="text-center text-4xl md:text-left">
             {t("contacts.title")}
-          </h3>
+          </h2>
           <p className="text-balance text-center md:text-left">
             {t("contacts.description")}
           </p>
