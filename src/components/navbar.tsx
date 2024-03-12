@@ -86,6 +86,9 @@ export default function Navbar() {
             size={26}
             toggled={showMobileMenu}
             toggle={setShowMobileMenu}
+            aria-controls="mobile-menu"
+            aria-expanded={showMobileMenu ? 'true' : 'false'}
+            aria-label="Navigation menu"
           />
         </div>
         {showMobileMenu && components && (
