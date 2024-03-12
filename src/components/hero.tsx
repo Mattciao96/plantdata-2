@@ -7,23 +7,23 @@ export default function HeroSection() {
   return (
     <div className="flex flex-col justify-evenly md:flex-row">
       <div className=" mt-24 text-justify md:mt-20 md:text-left">
-          {i18n.resolvedLanguage === "en" && (
-            <h1 className="text-title -mx-4 text-center  font-medium text-[#3ecf8e] md:mx-0 md:text-left">
-              {t("hero.title")}
-            </h1>
-          )}
-          <h2 className="text-title -mx-4 text-center font-medium md:mx-0 md:text-left">
-            {t("hero.subtitle.part1")}
-          </h2>
-          <h2 className="text-title -mx-4 text-center font-medium md:mx-0 md:text-left">
-            {t("hero.subtitle.part2")}
-          </h2>
-          {i18n.resolvedLanguage === "it" && (
-            <h1 className="text-title -mx-4 text-center font-medium text-[#3ecf8e] md:mx-0 md:text-left">
-              {t("hero.title")}
-            </h1>
-          )}
-  
+        {i18n.resolvedLanguage === "en" && (
+          <h1 className="text-title -mx-4 text-center  font-medium text-[#3ecf8e] md:mx-0 md:text-left">
+            {t("hero.title")}
+          </h1>
+        )}
+        <h2 className="text-title -mx-4 text-center font-medium md:mx-0 md:text-left">
+          {t("hero.subtitle.part1")}
+        </h2>
+        <h2 className="text-title -mx-4 text-center font-medium md:mx-0 md:text-left">
+          {t("hero.subtitle.part2")}
+        </h2>
+        {i18n.resolvedLanguage === "it" && (
+          <h1 className="text-title -mx-4 text-center font-medium text-[#3ecf8e] md:mx-0 md:text-left">
+            {t("hero.title")}
+          </h1>
+        )}
+
         <p className="m-auto max-w-[580px] text-balance pt-8 text-center md:m-0 md:py-4 md:pl-1 md:text-left">
           {t("hero.description")}
         </p>
@@ -36,12 +36,12 @@ export default function HeroSection() {
       <div className="hidden h-full max-h-[500px] w-full max-w-[500px] md:mt-2 lg:block">
         <img
           className="m-h-[inherit]"
-          src="./images/other/planthero.png"
+          src="./images/other/planthero.webp"
           alt=""
         />
       </div>
       {/* <div className="relative py-32 md:min-w-[600px] md:h-[40rem] object-contain overflow-hidden flex justify-center">
-        <img className="absolute -mt-[120px] w-[400px] h-auto -ml-[250px]" src="./images/other/planthero.png" alt="" />
+        <img className="absolute -mt-[120px] w-[400px] h-auto -ml-[250px]" src="./images/other/planthero.webp" alt="" />
         <div className="absolute mt-40 w-full pl-52">
           <div className="rounded-full">
             <div className="shadow-md flex px-4 gap-2 justify-start border-t border-l border-r border-input bg-muted rounded-t-[10px] min-h-[30px]">
