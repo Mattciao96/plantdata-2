@@ -28,7 +28,7 @@ export default function HeroSection() {
           {t("hero.description")}
         </p>
         <div className="flex justify-center py-2 md:justify-start md:pl-1">
-          <Button>
+          <Button asChild>
             <Link to="resources">{t("hero.button")}</Link>
           </Button>
         </div>

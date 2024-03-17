@@ -40,7 +40,7 @@ export default function DiscoverSection() {
             {t("resources.description")}
           </p>
           <div className="flex justify-center py-2  md:justify-start">
-            <Button>
+            <Button asChild>
               <Link to={"resources"}>{t("resources.button")}</Link>
             </Button>
           </div>
