@@ -29,8 +29,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@tanstack/react-query-devtools": "^5.17.18",
     "@tanstack/eslint-plugin-query": "^5.17.7",
+    "@tanstack/react-query-devtools": "^5.17.18",
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
@@ -41,7 +41,6 @@
     "@typescript-eslint/parser": "^6.18.1",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
-    "prettier-plugin-tailwindcss": "^0.5.11",
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
@@ -49,9 +48,13 @@
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.4.2",
     "postcss": "^8.4.33",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "react-i18next": "^14.0.0",
+    "sharp": "^0.33.2",
+    "svgo": "^3.2.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
-    "vite": "^5.0.11"
+    "vite": "^5.0.11",
+    "vite-plugin-image-optimizer": "^1.1.7"
   }
 }
