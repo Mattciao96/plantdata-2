@@ -16,7 +16,7 @@ const resourcesData: ResourceData[] = [
     title: "resources.floritaly.title",
     image: "images/sites/floritalylogo.png",
     description: "resources.floritaly.description",
-    link: "https://dryades.units.it/floritaly",
+    link: "https://floritaly.plantdata.it",
     button: "resources.floritaly.button",
   },
   {
