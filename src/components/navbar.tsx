@@ -47,7 +47,7 @@ export default function Navbar() {
       >
         <div className="flex items-center p-[4px]">
           {/* <img src="plantdata.png" alt="PlantData logo" /> */}
-          <Leaf className="h-9 w-9 text-[#3ecf8e]" />
+          <Leaf className="h-9 w-9 text-[#29a36a] dark:text-[#3ecf8e]" />
           <Link
             to={"/"}
             className="pl-1 text-2xl font-bold"

@@ -52,7 +52,7 @@ export default function DiscoverSection() {
       {/* SECTION 3 */}
       <li className="mb-40 flex min-w-full flex-col items-center justify-evenly gap-4 md:my-60 md:flex-row">
         <div className="relative flex items-center justify-center p-0 md:p-12 ">
-          <Globe className="h-[100px] w-[100px] text-[#3ecf8e] dark:text-[#3ecf8e]" />
+          <Globe className="h-[100px] w-[100px] text-[#29a36a] dark:text-[#3ecf8e]" />
         </div>
         <div className="flex max-w-[500px] flex-col gap-4 md:gap-2 ">
           <h2 className="text-center text-4xl md:text-left">

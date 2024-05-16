@@ -122,7 +122,7 @@ function UniversityLogo({ title, image, url, className }:UniversityLogoProps) {
       <a href={url} className="absolute inset-0 z-10" aria-label={title}>
         <span className="sr-only">{title}</span>
       </a>
-      <img src={image} className={cn("", className)} alt={title} />
+      <img src={image} className={cn("", className)} alt={`logo of ${title}`} />
     </li>
   );
 }
