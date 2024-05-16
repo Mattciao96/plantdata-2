@@ -79,7 +79,7 @@ export default function ImageScrollFixed() {
       <div className="relative my-1 flex max-h-[200px] max-w-[100vw] justify-center overflow-hidden md:w-[50vw] md:max-w-[600px] md:rounded">
         <img
           className="mx-1 h-[120px] max-h-[120px] min-h-[120px] w-auto max-w-none rounded"
-          src="./images/other/ophris.jpg"
+          src="./images/other/ophris.webp"
           alt=""
         />
         <img
@@ -94,7 +94,7 @@ export default function ImageScrollFixed() {
         />
         <img
           className="mx-1 h-[120px] max-h-[120px] min-h-[120px] w-auto max-w-none rounded"
-          src="./images/other/non.jpg"
+          src="./images/other/non.webp"
           alt=""
         />
       </div>
@@ -106,7 +106,7 @@ export default function ImageScrollFixed() {
         />
         <img
           className="mx-1 h-[120px] max-h-[120px] min-h-[120px] w-auto max-w-none rounded"
-          src="./images/other/stella.jpg"
+          src="./images/other/stella.webp"
           alt=""
         />
         <img
@@ -129,7 +129,7 @@ export default function ImageScrollFixed() {
       <div className="relative my-1 flex max-h-[200px] max-w-[100vw] justify-center overflow-hidden md:w-[50vw] md:max-w-[600px] md:rounded">
         <img
           className="mx-1 h-[120px] max-h-[120px] min-h-[120px] w-auto max-w-none rounded"
-          src="./images/other/vulpi.jpg"
+          src="./images/other/vulpi.webp"
           alt=""
         />
         <img
@@ -139,7 +139,7 @@ export default function ImageScrollFixed() {
         />
         <img
           className="mx-1 h-[120px] max-h-[120px] min-h-[120px] w-auto max-w-none rounded"
-          src="./images/other/ophris.jpg"
+          src="./images/other/ophris.webp"
           alt=""
         />
         <img
