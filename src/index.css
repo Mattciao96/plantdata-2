@@ -165,7 +165,9 @@
     inset: 0;
     border-radius: inherit;
     padding: 2px;
-    background: linear-gradient(180deg, #00dc82, #00dc82, transparent 90%);
+ /*    background: linear-gradient(180deg, #00dc82, #00dc82, transparent 90%);
+  */   
+  background: linear-gradient(180deg, #29a36a, #29a36a, transparent 90%);
     -webkit-mask:
       linear-gradient(#000, #000) content-box,
       linear-gradient(#000, #000);
@@ -179,7 +181,8 @@
     height: 50px;
     border-radius: 50%;
 
-    background-color: #00dc82;
+    /* background-color: #00dc82; */
+    background-color: #29a36a;
     position: absolute;
     background-clip: padding-box;
     z-index: -1;
