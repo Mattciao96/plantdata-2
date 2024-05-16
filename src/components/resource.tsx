@@ -61,7 +61,7 @@ function Resource({ title, description, image, link, button }: ResourceData) {
         />
       </div>
       <div className="flex flex-col gap-4 md:w-[60%] md:gap-2 md:px-4">
-        <h3 className="mb-4 text-center text-4xl md:text-left">{t(title)}</h3>
+        <h2 className="mb-4 text-center text-4xl md:text-left">{t(title)}</h2>
         <p className="pl-[2px]">{t(description)}</p>
         <div className="flex justify-center py-2 md:justify-start">
           <Button asChild>

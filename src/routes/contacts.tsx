@@ -38,9 +38,9 @@ export default function Contacts() {
       <ul className="flex flex-col items-center gap-4">
         {contacts.map((contact, index) => (
           <li className="max-w-[300px]" key={index}>
-            <h3 className="text-center text-2xl md:mb-2 md:max-w-full ">
+            <h2 className="text-center text-2xl md:mb-2 md:max-w-full ">
               {t(contact.role)}
-            </h3>
+            </h2>
             <div>
               <p className="text-center text-[14px] md:mb-4 md:pl-1">
                 {t(contact.name)}

@@ -38,35 +38,31 @@ function useUniversity() {
 export default function UniversityList() {
   return (
     <>
-      <Title text={"about-us.title"}/>
-      <ul className="flex w-full flex-col items-center mb-8">
-        <QueryClientProvider client={queryClient}>
+      <Title text={"about-us.title"} />
+      <QueryClientProvider client={queryClient}>
+        <ul className="mb-8 flex w-full flex-col items-center">
           <UniversityListGet />
-          <ReactQueryDevtools />
-        </QueryClientProvider>
-      </ul>
+       
+        </ul>
+      </QueryClientProvider>
     </>
   );
 }
 
-
 function UniversityListGet() {
-  const { status, data} = useUniversity();
+  const { status, data } = useUniversity();
   return (
     <>
       {status === "pending" ? (
-        <div className="flex justify-center">
+        <li className="flex justify-center">
           <Spinner />
-        </div>
+        </li>
       ) : status === "error" ? (
-        <span>Error retriving the list of universities</span>
+        <li>Error retriving the list of universities</li>
       ) : (
         <>
           {data.map((university) => (
-            <University
-              {...university}
-              key={university.id}
-            />
+            <University {...university} key={university.id} />
           ))}
         </>
       )}
@@ -74,7 +70,13 @@ function UniversityListGet() {
   );
 }
 
-function University({ university, website, logo, point_of_contact, email }: UniversityData) {
+function University({
+  university,
+  website,
+  logo,
+  point_of_contact,
+  email,
+}: UniversityData) {
   const { t } = useTranslation();
   return (
     <li className="mb-20 flex w-full max-w-[400px] flex-col items-center justify-evenly gap-1 rounded-xl border border-input bg-pure p-6 first:mt-0 md:my-8 md:max-w-[900px] md:flex-row md:gap-4 md:last:mb-16">
@@ -86,12 +88,14 @@ function University({ university, website, logo, point_of_contact, email }: Univ
         />
       </div>
       <div className="flex flex-col items-center gap-4 md:w-[60%] md:items-start md:gap-0 md:px-4">
-        <h3 className="max-w-[250px] text-center text-xl md:mb-4 md:max-w-full md:text-left">
+        <h2 className="max-w-[250px] text-center text-xl md:mb-4 md:max-w-full md:text-left">
           {university}
-        </h3>
+        </h2>
         <div className="w-[146px]">
-          <p className="text-center md:text-left text-sm font-medium">{t("about-us.uni-contacts")}</p>
-          <p className="text-center md:text-left md:pl-1 text-[14px] md:mb-4 ">
+          <p className="text-center text-sm font-medium md:text-left">
+            {t("about-us.uni-contacts")}
+          </p>
+          <p className="text-center text-[14px] md:mb-4 md:pl-1 md:text-left ">
             {point_of_contact}
             <br />
             {email}
